@@ -1,0 +1,20 @@
+body {
+  background-color: #000010;
+}
+
+#canvas-container {
+  /*background-color: #050030;*/
+  color: orange;
+  font-family: sans-serif;
+  /*width: 700px;*/
+  /*height: 100%;*/
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#game-canvas {
+  margin: auto;
+  width: 720;
+  height: 480;
+}
