@@ -25,14 +25,16 @@ function Game() {
   this.loadLevels();
 
   // console.log(levelData.testlevel)
-  this.level = new Level(levelData.testlevel);
+  this.level = this.levels["testlevel"]
 
   // gameStateRef contains references to various
-  // aspects of the gamestate, to pass to entity.update
+  // aspects of the gamestate, and special variables
+  // passed to entity.update, etc
   this.gameStateRef = {
     level: this.level,
     player: this.player,
     vpad: this.vpad,
+    portalTick: 0
   }
 
   var self = this;
@@ -122,6 +124,19 @@ Game.prototype.runLogic = function() {
   // this.level.animateTiles(this.renderer.animTick);
    this.keyHandler.incrementTicks();
 
+
+   if (this.gameStateRef.portalTick > 0) {
+     this.gameStateRef.portalTick--;
+   }
+
+   if (this.gameStateRef.portalTick == 1) {
+     //  console.log("booyah")
+     this.level = this.levels[this.gameStateRef.portalDest];
+     this.gameStateRef.level = this.level;
+     this.player.moveToMapPos(this.gameStateRef.portalPos);
+     this.gameStateRef.portalTick = 0;
+   }
+
 }
 
 // -------------------------------------------------------
@@ -139,7 +154,12 @@ Game.prototype.updateDelta = function() {
 // Game.loadLevels
 // -------------------------------------------------------
 Game.prototype.loadLevels = function() {
-  
+  this.levels = {}
+  var levelnames = Object.keys(levelData);
+  for (var i = 0; i < levelnames.length; i++) {
+    var name = levelnames[i];
+    this.levels[name] = new Level(levelData[name]);
+  }
 }
 
 // =======================================================

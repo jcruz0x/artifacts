@@ -48,6 +48,15 @@ Entity.prototype.moveToMapPos = function(mapPos) {
 }
 
 // -------------------------------------------------------
+// MoveToMapPosRounded
+// -------------------------------------------------------
+Entity.prototype.moveToMapPosRounded = function(x, y) {
+  var mapX = (x / 16) | 0;
+  var mapY = (y / 16) | 0;
+  this.moveToMapPos({ x: mapX, y: mapY });
+}
+
+// -------------------------------------------------------
 // Make Hitbox
 // -------------------------------------------------------
 Entity.prototype.makeHitbox = function(xo, yo, w, h) {

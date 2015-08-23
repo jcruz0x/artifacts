@@ -42,6 +42,12 @@ Player.prototype.reset = function(mapX, mapY) {
 // -------------------------------------------------------
 Player.prototype.update = function(gamestate) {
 
+    if (gamestate.portalTick != 0) {
+      // console.log(gamestate.portalTick)
+      // console.log("oops portaling")
+      return;
+    }
+
     this.velocity.x = 0;
     this.velocity.y = 0;
 
@@ -77,6 +83,23 @@ Player.prototype.update = function(gamestate) {
       var sensor = {x: this.sensors[i].x, y: this.sensors[i].y};
       var dir = this.sensors[i].dir
       this.sensePop(gamestate.level, sensor, dir, false);
+    }
+
+    for (var entity of gamestate.level.entities) {
+        if (this.collidingWith(entity.getHitbox())) {
+          // console.log("colliding")
+          var flags = entity.getFlags();
+          if ((flags & eFlags.special) != 0) {
+            // console.log("special")
+            var special = entity.getSpecial();
+            if (special.type == 'portal' && gamestate.portalTick == 0) {
+              // console.log("its happening");
+              gamestate.portalTick = tweak.portalTime;
+              gamestate.portalDest = special.dest;
+              gamestate.portalPos = special.destpos;
+            }
+          }
+        }
     }
 }
 

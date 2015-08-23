@@ -12,8 +12,12 @@ function Level(leveldata) {
   this.height = leveldata.height;
   this.width = leveldata.width;
 
-  this.upper = this.parseLayer(leveldata.upper)
-  this.lower = this.parseLayer(leveldata.lower)
+  this.upper = this.parseLayer(leveldata.upper);
+  this.lower = this.parseLayer(leveldata.lower);
+
+  this.entities = [];
+
+  this.addEntitys(leveldata.objects)
 }
 
 // -------------------------------------------------------
@@ -30,8 +34,15 @@ Level.prototype.parseLayer = function(flatData) {
 // -------------------------------------------------------
 // AddEntitys
 // -------------------------------------------------------
-Level.prototype.addEntitys = function(objectLayer) {
-  // stub
+Level.prototype.addEntitys = function(objects) {
+  for (var i = 0; i < objects.length; i++) {
+    var obj = objects[i];
+    switch(obj.type) {
+      case "portal":
+        this.entities.push(new Portal(obj));
+      break;
+    }
+  }
 }
 
 // -------------------------------------------------------
