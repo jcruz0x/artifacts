@@ -34,7 +34,8 @@ function Game() {
     level: this.level,
     player: this.player,
     vpad: this.vpad,
-    portalTick: 0
+    portalTick: 0,
+    unPortalTick: 0
   }
 
   var self = this;
@@ -81,6 +82,16 @@ Game.prototype.renderTick = function() {
     //
     this.player.draw(this.renderer, this.deltaFraction);
 
+    // this.renderer.mosaicEffect(4)
+
+    var pTick = this.gameStateRef.portalTick;
+    var unpTick = this.gameStateRef.unPortalTick;
+    if (pTick > 0) {
+      this.renderer.drawShutterPortalTick(pTick);
+    } else if (unpTick > 0) {
+      this.renderer.drawShutterPortalTick(tweak.portalTime - unpTick);
+    }
+
     this.renderer.flip();
   }
 
@@ -125,8 +136,12 @@ Game.prototype.runLogic = function() {
    this.keyHandler.incrementTicks();
 
 
-   if (this.gameStateRef.portalTick > 0) {
+   if (this.gameStateRef.portalTick > 0 && this.gameStateRef.unPortalTick == 0) {
      this.gameStateRef.portalTick--;
+   }
+
+   if (this.gameStateRef.unPortalTick > 0) {
+     this.gameStateRef.unPortalTick--;
    }
 
    if (this.gameStateRef.portalTick == 1) {
@@ -135,6 +150,7 @@ Game.prototype.runLogic = function() {
      this.gameStateRef.level = this.level;
      this.player.moveToMapPos(this.gameStateRef.portalPos);
      this.gameStateRef.portalTick = 0;
+     this.gameStateRef.unPortalTick = tweak.portalTime;
    }
 
 }

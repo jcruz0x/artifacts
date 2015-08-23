@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="4">
  <tileset firstgid="1" source="tilesheet.tsx"/>
  <layer name="lower" width="32" height="32" opacity="0.9">
   <data encoding="csv">
-1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
 1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
 1,1,2,2,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
 1,1,2,2,1,1,1,1,1,1,1,1,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
@@ -73,5 +73,20 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="objects"/>
+ <objectgroup name="objects">
+  <object id="1" type="portal" gid="15" x="212" y="12" width="16" height="16">
+   <properties>
+    <property name="level" value="testlevel"/>
+    <property name="x" value="16"/>
+    <property name="y" value="30"/>
+   </properties>
+  </object>
+  <object id="3" type="portal" gid="15" x="232" y="12" width="16" height="16">
+   <properties>
+    <property name="level" value="testlevel"/>
+    <property name="x" value="17"/>
+    <property name="y" value="30"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

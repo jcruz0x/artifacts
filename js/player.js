@@ -77,14 +77,20 @@ Player.prototype.update = function(gamestate) {
     this.currPos.y += this.velocity.y;
 
     // sense and pop
-
-
     for (var i = 0; i < this.sensors.length; i++) {
       var sensor = {x: this.sensors[i].x, y: this.sensors[i].y};
       var dir = this.sensors[i].dir
       this.sensePop(gamestate.level, sensor, dir, false);
     }
 
+    // pop into level
+    this.currPos.x = Math.max(0, this.currPos.x);
+    this.currPos.x = Math.min((gamestate.level.width-1) * 16, this.currPos.x);
+    this.currPos.y = Math.max(0, this.currPos.y);
+    this.currPos.y = Math.min((gamestate.level.height-1) * 16, this.currPos.y);
+
+
+    // do collision
     for (var entity of gamestate.level.entities) {
         if (this.collidingWith(entity.getHitbox())) {
           // console.log("colliding")

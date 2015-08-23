@@ -21,7 +21,7 @@ Portal.prototype = Object.create(Entity.prototype);
 // Get Hitbox
 // -------------------------------------------------------
 Portal.prototype.getHitbox = function() {
-  return this.makeHitbox(0, 0, 16, 16);
+  return this.makeHitbox(5, 5, 4, 4);
 }
 
 // -------------------------------------------------------

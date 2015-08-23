@@ -134,3 +134,66 @@ Renderer.prototype.setCameraPos = function(gameStateRef, deltafraction) {
   this.cameraPos.x = Clamp(centeredPos.x, 0, xMax);
   this.cameraPos.y = Clamp(centeredPos.y, 0, yMax);
 }
+
+// -------------------------------------------------------
+// drawShutter
+// -------------------------------------------------------
+Renderer.prototype.drawShutter = function(alpha) {
+  var midScreen = (RES_Y / 2)
+  var shutterHeight = (midScreen * alpha) | 0;
+  var shutterInverse = midScreen - shutterHeight;
+  this.context.fillStyle = "black";
+  this.context.fillRect(0, 0, RES_X, shutterHeight);
+  this.context.fillRect(0, midScreen + shutterInverse, RES_X, shutterHeight);
+}
+
+// -------------------------------------------------------
+// drawShutterPortalTick
+// -------------------------------------------------------
+Renderer.prototype.drawShutterPortalTick = function(portalTick) {
+  var tick = Math.max(0, portalTick - tweak.shutterHold);
+  var maxtick = tweak.portalTime - tweak.shutterHold;
+  var alpha = (maxtick - tick) / maxtick
+  // console.log(alpha);
+  this.drawShutter(alpha);
+}
+
+/*
+// -------------------------------------------------------
+// Renderer.mosaicEffect
+// -------------------------------------------------------
+Renderer.prototype.mosaicEffect = function(blocksize) {
+  for (var x = 0; x < RES_X; x += blocksize) {
+    for (var y = 0; y < RES_Y; y += blocksize) {
+      var colorstring = this.sampleBlock(x, y, blocksize)
+      this.context.fillStyle = colorstring;
+      this.context.fillRect(x, y, blocksize, blocksize);
+    }
+  }
+}
+
+// -------------------------------------------------------
+// Renderer.sampleBlock
+// -------------------------------------------------------
+Renderer.prototype.sampleBlock = function(x, y, blocksize) {
+  var red = 0;
+  var blue = 0;
+  var green = 0;
+  var gap = (blocksize / 2) | 0;
+  for (var i = 0; i < 3; i++) {
+    for (var j = 0; j < 3; j++) {
+      var xPlus = (gap * i) | 0;
+      var yPlus = (gap * j) | 0;
+      var sample = this.context.getImageData(x + xPlus, y + yPlus, 1, 1);
+      //console.log(data)
+      red   += sample.data[0];
+      green += sample.data[1];
+      blue  += sample.data[2];
+    }
+  }
+
+  var colorstring = "rgb(" + (red / 9) + "," + (blue / 9) + "," + (green / 9) + ")";
+  // console.log(colorstring);
+  return colorstring;
+}
+*/
