@@ -1,0 +1,1 @@
+var imageSources = {"mdeath1":"gfx/mdeath1.png","mdeath2":"gfx/mdeath2.png","mdeath3":"gfx/mdeath3.png","mdeath4":"gfx/mdeath4.png","mdeath5":"gfx/mdeath5.png","monstersheet":"gfx/monstersheet.png","tilesheet":"gfx/tilesheet.png"}

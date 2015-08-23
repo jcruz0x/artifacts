@@ -56,6 +56,9 @@ var tileData = {
   "68": {
     "solid": "true"
   },
+  "69": {
+    "solid": "true"
+  },
   "7": {
     "solid": "true"
   },

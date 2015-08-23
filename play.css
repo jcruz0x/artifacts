@@ -14,7 +14,9 @@ body {
 }
 
 #game-canvas {
+  image-rendering: pixelated;
   margin: auto;
   width: 720;
   height: 480;
+
 }

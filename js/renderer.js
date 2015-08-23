@@ -30,6 +30,9 @@ function Renderer(res) {
 
   // track number of frames passed
   this.animTick = 0;
+
+  // camera position
+  this.cameraPos = { x: 0, y: 0 };
 }
 
 // -------------------------------------------------------
@@ -52,7 +55,7 @@ Renderer.prototype.cls = function(color) {
 // Get camera Pos, just a stub for now, returns 0,0
 // -------------------------------------------------------
 Renderer.prototype.getCameraPos = function() {
-  return { x: 0, y: 0 };
+  return this.cameraPos;
 }
 
 // -------------------------------------------------------
@@ -70,6 +73,7 @@ Renderer.prototype.getScreenSize = function() {
 
 // -------------------------------------------------------
 // drawSprite
+// Draw an image given its name, in global levelspace
 // -------------------------------------------------------
 Renderer.prototype.drawSprite = function(name, x, y, xFlip) {
   var offset = this.getCameraPos();
@@ -98,18 +102,35 @@ Renderer.prototype.drawGraphic = function(name, x, y) {
 }
 
 // -------------------------------------------------------
-// Draw Tile, in global levelspace
+// Draw Atlus
+// Draw an image from a graphicset given the tileset name,
+// and atlus coords, draws in global levelspace
 // -------------------------------------------------------
-Renderer.prototype.drawTile = function(tileset, tilesetX, tilesetY, x, y) {
+Renderer.prototype.drawAtlus = function(tileset, atlusX, atlusY, x, y, w, h) {
   var img = this.res.getImage(tileset);
-  var atlusX = tilesetX * TILE_SIZE;
-  var atlusY = tilesetY * TILE_SIZE;
   var offset = this.getCameraPos();
 
   this.context.drawImage(
     img, atlusX, atlusY,
-    TILE_SIZE, TILE_SIZE,
+    w, h,
     x - offset.x, y - offset.y,
-    TILE_SIZE, TILE_SIZE
-  );
+    w, h
+    );
+}
+
+// -------------------------------------------------------
+// setCameraPos
+// -------------------------------------------------------
+Renderer.prototype.setCameraPos = function(gameStateRef, deltafraction) {
+
+  var playerPos = gameStateRef.player.getCoords(deltafraction)
+  var centeredPos = { x: playerPos.x - (RES_X / 2), y: playerPos.y - (RES_Y /2) };
+
+  var worldWidth = gameStateRef.level.width * TILE_SIZE;
+  var worldHeight = gameStateRef.level.height * TILE_SIZE;
+  var xMax = worldWidth - RES_X;
+  var yMax = worldHeight - RES_Y;
+
+  this.cameraPos.x = Clamp(centeredPos.x, 0, xMax);
+  this.cameraPos.y = Clamp(centeredPos.y, 0, yMax);
 }

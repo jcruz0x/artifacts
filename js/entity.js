@@ -18,7 +18,7 @@ function Entity() {
 // done before moving)
 // -------------------------------------------------------
 Entity.prototype.setPrevPos = function() {
-  this.prevPos = this.currPos;
+  this.prevPos = vec2Copy(this.currPos);
 }
 
 // -------------------------------------------------------
@@ -26,26 +26,25 @@ Entity.prototype.setPrevPos = function() {
 // -------------------------------------------------------
 Entity.prototype.getCoords = function(deltaFraction) {
   var tweenPos = interpolate(this.currPos, this.prevPos, deltaFraction);
-  return {x: fxUnscale(tweenPos.x), y: fxUnscale(tweenPos.y)};
+  return {x: tweenPos.x, y: tweenPos.y};
 }
 
 // -------------------------------------------------------
 // MoveTo (aka teleport, i.e. set current and prev pos)
 // -------------------------------------------------------
 Entity.prototype.moveTo = function(newPos) {
-  this.currPos = newPos;
-  this.prevPos = newPos;
+  this.currPos = vec2Copy(newPos);
+  this.prevPos = vec2Copy(newPos);
 }
 
 // -------------------------------------------------------
 // MoveTo Map Pos
 // -------------------------------------------------------
 Entity.prototype.moveToMapPos = function(mapPos) {
-  var newX = mapPos.x << TILE_AND_FIXED_SHIFT_BITS;
-  var newY = mapPos.y << TILE_AND_FIXED_SHIFT_BITS;
-  var newPos = { x: newX, y: newY };
-  this.currPos = newPos;
-  this.prevPos = newPos;
+  var newX = mapPos.x * TILE_SIZE;
+  var newY = mapPos.y * TILE_SIZE;
+  this.currPos = { x: newX, y: newY };
+  this.prevPos = { x: newX, y: newY };
 }
 
 // -------------------------------------------------------
@@ -53,10 +52,10 @@ Entity.prototype.moveToMapPos = function(mapPos) {
 // -------------------------------------------------------
 Entity.prototype.makeHitbox = function(xo, yo, w, h) {
   return {
-    x: this.currPos.x + fxScale(xo),
-    y: this.currPos.y + fxScale(yo),
-    w: fxScale(w),
-    h: fxScale(h)
+    x: this.currPos.x + xo,
+    y: this.currPos.y + yo,
+    w: w,
+    h: h
   };
 }
 
@@ -68,7 +67,8 @@ Entity.prototype.getHitbox = function() {
 }
 
 // -------------------------------------------------------
-// Basic Draw
+// Basic Draw (simple form of drawing applicable to many
+// objects, can be called by entity specific draw function)
 // -------------------------------------------------------
 Entity.prototype.basicDraw = function(renderer, deltaFraction, sprite) {
   var at = this.getCoords(deltaFraction);
@@ -87,47 +87,29 @@ Entity.prototype.collidingWith = function(withBox) {
 // -------------------------------------------------------
 Entity.prototype.sensePop = function(level, sensorOffset, direction, nopop) {
 
-  var sensorScaled = { x: fxScale(sensorOffset.x), y: fxScale(sensorOffset.y) };
-  var sensorPos = { x: sensorScaled.x + this.currPos.x, y: sensorScaled.y + this.currPos.y };
+  var sensorPos = { x: sensorOffset.x + this.currPos.x, y: sensorOffset.y + this.currPos.y };
 
-  var tileName = level.tileAt(sensorPos);
+  var upperTile = level.tileAt(sensorPos, level.upper);
+  var lowerTile = level.tileAt(sensorPos, level.lower);
 
-  if (tileName == null) {
-    return { popped: false, flags: 0 };
-  }
+  var upperProps = tileData[upperTile - 1] || {};
+  var lowerProps = tileData[lowerTile - 1] || {};
 
-  var flags = tileProps[tileName].type;
-
-  var isHalfSize = ((flags & tFlags.half)  != 0);
-  var isSolid    = ((flags & tFlags.solid) != 0);
-  var isPlat     = ((flags & tFlags.plat)  != 0);
-
-  var tileBox = level.makeTileRect(sensorPos, isHalfSize);
+  var tileBox = level.makeTileRect(sensorPos, false);
   var thisBox = this.getHitbox();
 
-  if (isHalfSize) {
-    if (rectOverlap(tileBox, thisBox) == false) {
-      return { popped: false, flags: 0 };
-    }
-  }
+  var isSolid = (upperProps["solid"] == "true" || lowerProps["solid"] == "true");
 
-  var popped = false;
-
-  if (isSolid == true || (isPlat && oldfoot <= tileBox.y && direction == 'down')) {
-    // console.log('noodle');
-    popped = true;
+  if (isSolid) {
     if (nopop !== true) {
-      this.currPos = { x: this.currPos.x, y: this.currPos.y };
       switch (direction) {
-        case  'left': this.currPos.x = tileBox.x + tileBox.w; break;
-        case 'right': this.currPos.x = tileBox.x - thisBox.w; break;
-        case    'up': this.currPos.y = tileBox.y + tileBox.h; break;
-        case  'down': this.currPos.y = tileBox.y - thisBox.h; break;
+        case  DIR_LEFT: this.currPos.x = tileBox.x + tileBox.w; break;
+        case DIR_RIGHT: this.currPos.x = tileBox.x - thisBox.w; break;
+        case    DIR_UP: this.currPos.y = tileBox.y + tileBox.h; break;
+        case  DIR_DOWN: this.currPos.y = tileBox.y - thisBox.h; break;
       }
     }
   }
-
-  return { popped: popped, flags: flags };
 }
 
 // -------------------------------------------------------
@@ -149,4 +131,26 @@ Entity.prototype.message = function() {
 // -------------------------------------------------------
 Entity.prototype.update = function() {
   // sit there and look pretty
+}
+
+// -------------------------------------------------------
+// Entity.draw (default, does nothing)
+// -------------------------------------------------------
+Entity.prototype.draw = function() {
+  // na na, you cant see me
+}
+
+// -------------------------------------------------------
+// Entity.getCharsetAtlus
+// -------------------------------------------------------
+Entity.prototype.getCharsetAtlus = function(direction, frame) {
+  var y = direction * 32;
+  var x = 0;
+  if (frame == 1) {
+    x = 16;
+  } else if (frame == 3) {
+    x = 32;
+  }
+
+  return { x: x, y: y };
 }

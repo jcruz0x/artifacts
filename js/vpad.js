@@ -24,12 +24,10 @@ Vpad.prototype.getCode = function(button) {
       return 37;
     case 'right':
       return 39;
-    case 'jump':
+    case 'foo':
       return 90;
-    case 'shoot':
+    case 'bar':
       return 88;
-    case 'next':
-      return 78;
     default:
       return null;
   }

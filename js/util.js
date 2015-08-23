@@ -53,6 +53,7 @@ function getRandInt(min, max) {
 function requestFile(url, callback) {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
+    // this isnt quite right yet:
     if (xhr.readyState == 4 && xhr.status == 200) {
       callback(xhr);
     }
@@ -65,16 +66,33 @@ function requestFile(url, callback) {
 // ParseCSV
 // -------------------------------------------------------
 function parseCSV(text) {
+  // console.log("text: " + text + typeof text)
   var numstring = "";
   var out = [];
   for (var i = 0; i < text.length; i++) {
-    if (text[i] == ',') {
+    var ch = text.charAt(i);
+    if (ch == ',') {
       out.push(parseInt(numstring))
       numstring = "";
     } else {
-      numstring += text[i];
+      numstring += ch;
     }
   }
   out.push(parseInt(numstring));
+  // console.log(out);
   return out;
+}
+
+// -------------------------------------------------------
+// Vec2Copy
+// -------------------------------------------------------
+function vec2Copy(vec2) {
+  return { x: vec2.x, y: vec2.y };
+}
+
+// -------------------------------------------------------
+// Clamp
+// -------------------------------------------------------
+function Clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max)
 }

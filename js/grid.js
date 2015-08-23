@@ -59,8 +59,10 @@ Grid.prototype.set = function(x,y, val) {
 // Grid.set1d sets the value of the grid based on
 // a single offset value rather than x and y
 // -----------------------------------------------
-Grid.prototype.set = function(offset, val) {
-  var x = offset % this.width;
-  var y = (offset / this.width) | 0;
+Grid.prototype.set1d = function(offset, val) {
+  // console.log(offset);
+  var x = offset % this.xSize;
+  var y = (offset / this.xSize) | 0;
+  // console.log("x: " + x + " y: " + y)
   this.gridData[x][y] = val;
 }
