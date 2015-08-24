@@ -70,6 +70,7 @@ Boss.prototype.update = function(gamestate) {
     this.deathTick--
     if (this.deathTick == 1) {
       this.dead = true;
+      gamestate.endTick = 60;
     }
     return;
   }

@@ -50,6 +50,12 @@ Level.prototype.addEntitys = function(objects) {
       case "boss":
         this.entities.push(new Boss(obj));
         break;
+      case "pickup":
+        var x = ((obj.x / TILE_SIZE) | 0) * TILE_SIZE;
+        var y = ((obj.y / TILE_SIZE) | 0) * TILE_SIZE;
+        var type = obj.properties.type;
+        this.entities.push(new Pickup(x, y, type, 0))
+        break;
     }
   }
 }

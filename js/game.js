@@ -36,7 +36,10 @@ function Game() {
     vpad: this.vpad,
     portalTick: 0,
     unPortalTick: 0,
-    say: null
+    say: null,
+    endTick: 0,
+    winGame: false,
+    artifacts: 0
   }
 
   var self = this;
@@ -66,10 +69,20 @@ Game.prototype.logicTick = function() {
 // -------------------------------------------------------
 Game.prototype.renderTick = function() {
   if (this.res.everythingReady() == true) {
+
+
     this.updateDelta();
     this.deltaFraction = this.deltaRemaining / FRAME_MS;
 
     this.renderer.cls();
+
+
+
+    if (this.gameStateRef.winGame == true) {
+      this.renderer.winGameCard();
+      this.renderer.flip();
+      return;
+    }
 
     this.renderer.setCameraPos(this.gameStateRef, this.deltaFraction);
 
@@ -108,15 +121,29 @@ Game.prototype.renderTick = function() {
 // -------------------------------------------------------
 Game.prototype.runLogic = function() {
 
+  if (this.gameStateRef.winGame == true) {
+    return;
+  }
+
+  if ( this.gameStateRef.endTick > 0) {
+    this.gameStateRef.endTick--;
+    if (this.gameStateRef.endTick == 1) {
+      this.gameStateRef.winGame = true;
+    }
+  }
+
+
   if (this.gameStateRef.say != null) {
     if (this.vpad.pressed('interact')) {
       this.gameStateRef.say = null;
       this.keyHandler.incrementTicks();
     } else {
+      this.player.setPrevPos();
       this.keyHandler.incrementTicks();
       return;
     }
   }
+
 
   this.renderer.animTick++;
 

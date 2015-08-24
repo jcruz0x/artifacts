@@ -173,6 +173,24 @@ Renderer.prototype.drawTextBox = function(say) {
 }
 
 
+// -------------------------------------------------------
+// winGameCard
+// -------------------------------------------------------
+Renderer.prototype.winGameCard = function() {
+  this.context.fillStyle = "rgba(10, 10, 20, 0.95)";
+  this.context.fillRect(16, 8, 208, 100);
+
+  this.context.fillStyle = "white"
+
+  this.context.font = "16px monospace"
+  this.context.fillText("congratzulashuns", 32, 32)
+
+  this.context.font = "10px monospace"
+  this.context.fillText("u won stupid game", 48, 64)
+  this.context.fillText("now go away", 80, 80)
+
+}
+
 /*
 // -------------------------------------------------------
 // Renderer.mosaicEffect

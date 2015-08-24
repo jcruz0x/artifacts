@@ -266,6 +266,11 @@
    <property name="solid" value="true"/>
   </properties>
  </tile>
+ <tile id="120">
+  <properties>
+   <property name="solid" value="true"/>
+  </properties>
+ </tile>
  <tile id="123">
   <properties>
    <property name="solid" value="true"/>

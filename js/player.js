@@ -4,8 +4,6 @@
 // Player Class
 // =======================================================
 
-
-
 // -------------------------------------------------------
 // Constructor
 // -------------------------------------------------------
@@ -30,11 +28,19 @@ function Player(mapX, mapY) {
 
   this.health = tweak.startHealth;
   this.maxHealth = tweak.startHealth;
+
+  this.mana = tweak.startMana * tweak.manaRatio;
+  this.maxMana = tweak.startMana * tweak.manaRatio;
+
   this.hurtTick = 0;
   this.deathTick = 0;
 
   this.shieldTick = 0;
   this.shieldCoolTick = 0;
+
+  this.hasMagic = false;
+  this.hasSprint = false;
+  this.hasShield = false;
 }
 
 Player.prototype = Object.create(Entity.prototype);
@@ -82,12 +88,13 @@ Player.prototype.update = function(gamestate) {
     this.velocity.x = 0;
     this.velocity.y = 0;
 
-    if (gamestate.vpad.pressed('shield') && this.shieldCoolTick == 0) {
+    if (gamestate.vpad.pressed('shield') && this.shieldCoolTick == 0 && this.hasShield && this.mana > tweak.manaRatio) {
+      this.mana -= tweak.manaRatio;
       this.shieldTick = tweak.shieldTime;
       this.shieldCoolTick = tweak.shieldCool;
     }
 
-    var vSpeed = (gamestate.vpad.down('sprint')) ? tweak.playerSprint : tweak.playerSpeed;
+    var vSpeed = (gamestate.vpad.down('sprint') && this.hasSprint) ? tweak.playerSprint : tweak.playerSpeed;
 
     var changeDir = true;
     if (
@@ -145,7 +152,8 @@ Player.prototype.update = function(gamestate) {
         )
     }
 
-    if (gamestate.vpad.pressed('magic')) {
+    if (gamestate.vpad.pressed('magic') && this.mana > 0 && this.hasMagic) {
+        this.mana--;
         var firelist = fireVel[this.direction];
         for (var i = 0; i < firelist.length; i++) {
           var fireballvec = firelist[i];
@@ -169,6 +177,9 @@ Player.prototype.update = function(gamestate) {
             gamestate.portalTick = tweak.portalTime;
             gamestate.portalDest = special.dest;
             gamestate.portalPos = special.destpos;
+          }
+          if (special.type == 'pickup') {
+            this.powerUp(special.pickup, gamestate);
           }
         }
         if (((flags & eFlags.hazard) != 0) && this.hurtTick == 0 && this.deathTick == 0 && this.shieldTick == 0) {
@@ -213,7 +224,7 @@ Player.prototype.draw = function(renderer, deltaFraction) {
 
   renderer.drawAtlus(sheet, atlus.x, atlus.y, coords.x, coords.y - 16, 16, 32);
 
-  if (this.shieldTick > 0 && ((this.shieldTick / 4) % 2) == 0) {
+  if (this.shieldTick > 0 && (((this.shieldTick / 3) | 0) % 3) == 0) {
     renderer.drawSprite('shield2', coords.x - 16, coords.y - 24, false)
   }
 
@@ -254,4 +265,83 @@ Player.prototype.die = function() {
   this.deathTick = 0;
   this.hurtTick = 0;
   this.health = this.maxHealth;
+  this.mana = this.maxMana;
+}
+
+// -------------------------------------------------------
+// powerUP
+// -------------------------------------------------------
+Player.prototype.powerUp = function(powerup, gamestate) {
+  switch(powerup) {
+    case 'necklace':
+      gamestate.artifacts++;
+      gamestate.say = [
+        'got necklace of demonic',
+        'rage.  press x to use',
+        'firey death magic',
+      ];
+      this.hasMagic = true;
+    break;
+    case 'codpiece':
+      gamestate.artifacts++;
+      gamestate.say = [
+        'got codpiece of unholy',
+        'shielding. press v to',
+        'use magic shield',
+      ];
+      this.hasShield = true;
+    break;
+    case 'garment':
+      gamestate.artifacts++;
+      gamestate.say = [
+        'got dirty garment of',
+        'devilish quickness.',
+        'hold c to sprint',
+      ];
+      this.hasSprint = true;
+    break;
+    case 'cross':
+      gamestate.artifacts++;
+      gamestate.say = [
+        'got useless artifact',
+        'it has no real power',
+      ]
+    break;
+    case 'potion':
+      if (this.mana < this.maxMana) {
+        this.mana += tweak.manaRatio;
+      }
+    break;
+    case 'lilheart':
+      if (this.health < this.maxHealth) {
+        this.health++;
+      }
+    break;
+    case 'brain':
+      gamestate.say = [
+        'found bloodied brain',
+        'max mana points increased',
+        'by one bar'
+      ];
+      this.maxMana += tweak.manaRatio;
+      this.mana = this.maxMana;
+    break;
+    case 'bigheart':
+      gamestate.say = [
+        'found beating heart',
+        'max health increased',
+        'by one bar'
+      ];
+      this.maxHealth++;
+      this.health = this.maxHealth;
+    break;
+    case 'baby':
+      // gamestate.say = [
+      //   'ate baby. got full',
+      //   'health and manas'
+      // ];
+      this.health = this.maxHealth;
+      this.mana = this.maxMana;
+    break;
+  }
 }

@@ -9228,6 +9228,87 @@ var levelData = {
         "type": "villager",
         "x": 296,
         "y": 428
+      },
+      {
+        "name": "",
+        "properties": {
+          "type": "lilheart"
+        },
+        "type": "pickup",
+        "x": 392,
+        "y": 92
+      },
+      {
+        "name": "",
+        "properties": {
+          "type": "potion"
+        },
+        "type": "pickup",
+        "x": 456,
+        "y": 172
+      },
+      {
+        "name": "",
+        "properties": {
+          "type": "necklace"
+        },
+        "type": "pickup",
+        "x": 36,
+        "y": 172
+      },
+      {
+        "name": "",
+        "properties": {
+          "type": "codpiece"
+        },
+        "type": "pickup",
+        "x": 68,
+        "y": 248
+      },
+      {
+        "name": "",
+        "properties": {
+          "type": "garment"
+        },
+        "type": "pickup",
+        "x": 212,
+        "y": 284
+      },
+      {
+        "name": "",
+        "properties": {
+          "type": "cross"
+        },
+        "type": "pickup",
+        "x": 136,
+        "y": 316
+      },
+      {
+        "name": "",
+        "properties": {
+          "type": "baby"
+        },
+        "type": "pickup",
+        "x": 244,
+        "y": 364
+      },
+      {
+        "name": "",
+        "properties": {
+          "type": "bigheart"
+        },
+        "type": "pickup",
+        "x": 36,
+        "y": 380
+      },
+      {
+        "name": "",
+        "properties": {
+          "type": "brain"
+        },
+        "type": "pickup",
+        "x": 116,
+        "y": 412
       }
     ],
     "width": 32
