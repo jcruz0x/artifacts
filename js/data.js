@@ -29,8 +29,17 @@ var DIR_LEFT = 3;
 // -------------------------------------------------------
 var tweak = {
   playerSpeed: 1.8,
+  playerSprint: 2.5,
+  shieldTime: 60,
+  shieldCool: 120,
   portalTime: 16,
-  shutterHold: 3
+  shutterHold: 3,
+  villagerSpeed: 1,
+  startHealth: 5,
+  hurtTickTime: 20,
+  hurtFlashDiff: 10,
+  playerDeathTick: 64,
+  rockVel: 5
 }
 
 // =======================================================
@@ -42,11 +51,58 @@ var tweak = {
 // -------------------------------------------------------
 var eFlags = {
   special: 1,
+  hazard: 2,
+  shootable: 4,
+  npc: 8
 }
 
 // -------------------------------------------------------
 // Message flags
 // -------------------------------------------------------
 var mFlags = {
-
+  kill: 1,
+  hitTarget: 2,
 }
+
+// =======================================================
+// Misc
+// =======================================================
+
+var rockVel = [
+  {x: 0, y: -tweak.rockVel},
+  {x: tweak.rockVel, y: 0},
+  {x: 0, y: tweak.rockVel},
+  {x: -tweak.rockVel, y: 0}
+]
+
+var fireVel = [
+  [
+    {x: 0, y: -tweak.rockVel},
+    {x: -0.5, y: -tweak.rockVel},
+    {x: -1, y: -tweak.rockVel},
+    {x: 0.5, y: -tweak.rockVel},
+    {x: 1, y: -tweak.rockVel},
+  ],
+  [
+    {x: tweak.rockVel, y: 0},
+    {x: tweak.rockVel, y: 0.5},
+    {x: tweak.rockVel, y: 1},
+    {x: tweak.rockVel, y: -0.5},
+    {x: tweak.rockVel, y: -1},
+  ],
+  [
+
+    {x: 0, y: tweak.rockVel},
+    {x: 0.5, y: tweak.rockVel},
+    {x: 1, y: tweak.rockVel},
+    {x: -0.5, y: tweak.rockVel},
+    {x: -1, y: tweak.rockVel},
+  ],
+  [
+    {x: -tweak.rockVel, y: 0},
+    {x: -tweak.rockVel, y: 0.5},
+    {x: -tweak.rockVel, y: 1},
+    {x: -tweak.rockVel, y: -0.5},
+    {x: -tweak.rockVel, y: -1}
+  ]
+]

@@ -35,7 +35,8 @@ function Game() {
     player: this.player,
     vpad: this.vpad,
     portalTick: 0,
-    unPortalTick: 0
+    unPortalTick: 0,
+    say: null
   }
 
   var self = this;
@@ -72,17 +73,20 @@ Game.prototype.renderTick = function() {
 
     this.renderer.setCameraPos(this.gameStateRef, this.deltaFraction);
 
-    // old stuff from my other game:
 
      drawMap(this.renderer, this.level, "tilesheet");
-    //
-    // for (var entity of this.level.entities) {
-    //   entity.draw(this.renderer, this.deltaFraction);
-    // }
-    //
+
+    for (var entity of this.level.entities) {
+      entity.draw(this.renderer, this.deltaFraction);
+    }
+
     this.player.draw(this.renderer, this.deltaFraction);
 
-    // this.renderer.mosaicEffect(4)
+    DrawUI(this.gameStateRef, this.renderer);
+
+    if (this.gameStateRef.say != null) {
+      this.renderer.drawTextBox(this.gameStateRef.say)
+    }
 
     var pTick = this.gameStateRef.portalTick;
     var unpTick = this.gameStateRef.unPortalTick;
@@ -103,32 +107,49 @@ Game.prototype.renderTick = function() {
 // Game.runLogic (main logic update)
 // -------------------------------------------------------
 Game.prototype.runLogic = function() {
+
+  if (this.gameStateRef.say != null) {
+    if (this.vpad.pressed('interact')) {
+      this.gameStateRef.say = null;
+      this.keyHandler.incrementTicks();
+    } else {
+      this.keyHandler.incrementTicks();
+      return;
+    }
+  }
+
   this.renderer.animTick++;
 
+  var anyDead = false;
 
-  // stuff from my other game I might use:
+  if (this.player.dead == true) {
+    this.level = this.levels["testlevel"];
+    this.gameStateRef.level = this.level;
+    this.player.die();
+  }
 
-  // var anyDead = false;
-  //
-  // for (var entity of this.level.entities) {
-  //   entity.setPrevPos();
-  //   if (entity.dead == false) {
-  //     entity.update(this.gameStateRef);
-  //   } else {
-  //     anyDead = true;
-  //   }
-  // }
-  //
-  // if (anyDead) {
-  //   var newlist = [];
-  //   for (var entity of this.level.entities) {
-  //     if (entity.dead == false) {
-  //       newlist.push(entity);
-  //     }
-  //   }
-  //   this.level.entities = newlist;
-  // }
-  //
+  for (var entity of this.level.entities) {
+    entity.setPrevPos();
+    if (entity.dead == false) {
+      entity.update(this.gameStateRef);
+    } else {
+      anyDead = true;
+    }
+  }
+
+  if (anyDead) {
+    // console.log('some dead')
+    var newlist = [];
+    for (var entity of this.level.entities) {
+      if (entity.dead == false) {
+        newlist.push(entity);
+      } else {
+        // console.log(entity)
+      }
+    }
+    this.level.entities = newlist;
+  }
+
    this.player.setPrevPos();
    this.player.update(this.gameStateRef);
   //

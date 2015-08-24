@@ -62,6 +62,630 @@
                  "width":16,
                  "x":232,
                  "y":12
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":5,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":184,
+                 "y":88
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":7,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":52,
+                 "y":124
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":8,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":20,
+                 "y":168
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":9,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":84,
+                 "y":200
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":10,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":308,
+                 "y":60
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":11,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":100,
+                 "y":24
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":12,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":312,
+                 "y":120
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":13,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":132,
+                 "y":92
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":14,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":56,
+                 "y":52
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":15,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":288,
+                 "y":32
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":16,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":428,
+                 "y":72
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":17,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":448,
+                 "y":28
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":18,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":460,
+                 "y":108
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":19,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":392,
+                 "y":124
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":20,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":484,
+                 "y":140
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":21,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":424,
+                 "y":172
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":22,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":484,
+                 "y":284
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":23,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":420,
+                 "y":300
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":24,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":388,
+                 "y":300
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":25,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":324,
+                 "y":348
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":26,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":412,
+                 "y":332
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":27,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":360,
+                 "y":368
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":28,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":212,
+                 "y":408
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":29,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":328,
+                 "y":488
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":30,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":404,
+                 "y":452
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":31,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":472,
+                 "y":396
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":32,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":452,
+                 "y":436
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":33,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":336,
+                 "y":392
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":34,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":80,
+                 "y":492
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":35,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":152,
+                 "y":464
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":36,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":164,
+                 "y":408
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":37,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":116,
+                 "y":376
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":38,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":12,
+                 "y":376
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":39,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":52,
+                 "y":440
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":40,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":68,
+                 "y":292
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":41,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":24,
+                 "y":252
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":42,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":100,
+                 "y":248
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":43,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":260,
+                 "y":256
+                }, 
+                {
+                 "gid":15,
+                 "height":16,
+                 "id":44,
+                 "name":"",
+                 "properties":
+                    {
+
+                    },
+                 "rotation":0,
+                 "type":"villager",
+                 "visible":true,
+                 "width":16,
+                 "x":32,
+                 "y":72
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -70,7 +694,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":4,
+ "nextobjectid":45,
  "orientation":"orthogonal",
  "properties":
     {
@@ -81,7 +705,7 @@
  "tilesets":[
         {
          "firstgid":1,
-         "image":"..\/gfx-work\/tilesheet.png",
+         "image":"..\/gfx\/tilesheet.png",
          "imageheight":256,
          "imagewidth":256,
          "margin":0,
@@ -95,6 +719,26 @@
          "tileheight":16,
          "tileproperties":
             {
+             "101":
+                {
+                 "solid":"true"
+                },
+             "102":
+                {
+                 "solid":"true"
+                },
+             "103":
+                {
+                 "solid":"true"
+                },
+             "104":
+                {
+                 "solid":"true"
+                },
+             "105":
+                {
+                 "solid":"true"
+                },
              "2":
                 {
                  "solid":"true"
@@ -108,6 +752,18 @@
                  "solid":"true"
                 },
              "42":
+                {
+                 "solid":"true"
+                },
+             "43":
+                {
+                 "solid":"true"
+                },
+             "44":
+                {
+                 "solid":"true"
+                },
+             "45":
                 {
                  "solid":"true"
                 },
@@ -151,6 +807,14 @@
                 {
                  "solid":"true"
                 },
+             "60":
+                {
+                 "solid":"true"
+                },
+             "61":
+                {
+                 "solid":"true"
+                },
              "64":
                 {
                  "solid":"true"
@@ -191,7 +855,79 @@
                 {
                  "solid":"true"
                 },
+             "75":
+                {
+                 "solid":"true"
+                },
+             "76":
+                {
+                 "solid":"true"
+                },
+             "77":
+                {
+                 "solid":"true"
+                },
              "8":
+                {
+                 "solid":"true"
+                },
+             "80":
+                {
+                 "solid":"true"
+                },
+             "81":
+                {
+                 "solid":"true"
+                },
+             "82":
+                {
+                 "solid":"true"
+                },
+             "83":
+                {
+                 "solid":"true"
+                },
+             "84":
+                {
+                 "solid":"true"
+                },
+             "85":
+                {
+                 "solid":"true"
+                },
+             "86":
+                {
+                 "solid":"true"
+                },
+             "87":
+                {
+                 "solid":"true"
+                },
+             "88":
+                {
+                 "solid":"true"
+                },
+             "89":
+                {
+                 "solid":"true"
+                },
+             "90":
+                {
+                 "solid":"true"
+                },
+             "96":
+                {
+                 "solid":"true"
+                },
+             "97":
+                {
+                 "solid":"true"
+                },
+             "98":
+                {
+                 "solid":"true"
+                },
+             "99":
                 {
                  "solid":"true"
                 }

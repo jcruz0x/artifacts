@@ -96,3 +96,11 @@ function vec2Copy(vec2) {
 function Clamp(value, min, max) {
   return Math.min(Math.max(value, min), max)
 }
+
+// -------------------------------------------------------
+// randRange
+// -------------------------------------------------------
+function randRange(min, max) {
+  var randScale = (max - min) + 1
+  return Math.floor((Math.random() * randScale) + min)
+}

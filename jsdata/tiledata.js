@@ -1,4 +1,25 @@
 var tileData = {
+  "101": {
+    "solid": "true"
+  },
+  "102": {
+    "solid": "true"
+  },
+  "103": {
+    "solid": "true"
+  },
+  "104": {
+    "solid": "true"
+  },
+  "105": {
+    "solid": "true"
+  },
+  "123": {
+    "solid": "true"
+  },
+  "124": {
+    "solid": "true"
+  },
   "2": {
     "solid": "true"
   },
@@ -9,6 +30,15 @@ var tileData = {
     "solid": "true"
   },
   "42": {
+    "solid": "true"
+  },
+  "43": {
+    "solid": "true"
+  },
+  "44": {
+    "solid": "true"
+  },
+  "45": {
     "solid": "true"
   },
   "48": {
@@ -41,6 +71,12 @@ var tileData = {
   "58": {
     "solid": "true"
   },
+  "60": {
+    "solid": "true"
+  },
+  "61": {
+    "solid": "true"
+  },
   "64": {
     "solid": "true"
   },
@@ -71,7 +107,61 @@ var tileData = {
   "74": {
     "solid": "true"
   },
+  "75": {
+    "solid": "true"
+  },
+  "76": {
+    "solid": "true"
+  },
+  "77": {
+    "solid": "true"
+  },
   "8": {
+    "solid": "true"
+  },
+  "80": {
+    "solid": "true"
+  },
+  "81": {
+    "solid": "true"
+  },
+  "82": {
+    "solid": "true"
+  },
+  "83": {
+    "solid": "true"
+  },
+  "84": {
+    "solid": "true"
+  },
+  "85": {
+    "solid": "true"
+  },
+  "86": {
+    "solid": "true"
+  },
+  "87": {
+    "solid": "true"
+  },
+  "88": {
+    "solid": "true"
+  },
+  "89": {
+    "solid": "true"
+  },
+  "90": {
+    "solid": "true"
+  },
+  "96": {
+    "solid": "true"
+  },
+  "97": {
+    "solid": "true"
+  },
+  "98": {
+    "solid": "true"
+  },
+  "99": {
     "solid": "true"
   }
 }

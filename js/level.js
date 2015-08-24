@@ -40,7 +40,16 @@ Level.prototype.addEntitys = function(objects) {
     switch(obj.type) {
       case "portal":
         this.entities.push(new Portal(obj));
-      break;
+        break;
+      case "villager":
+        this.entities.push(new Villager(obj));
+        break;
+      case "npc":
+        this.entities.push(new NPC(obj));
+        break;
+      case "boss":
+        this.entities.push(new Boss(obj));
+        break;
     }
   }
 }

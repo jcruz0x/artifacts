@@ -1,6 +1,6 @@
 require 'json/pure'
 
-source = "lvl-work/tset.foo"
+source = "lvl/testlevel.json"
 
 level = JSON.parse(File.new(source, "r").read)
 

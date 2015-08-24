@@ -158,6 +158,21 @@ Renderer.prototype.drawShutterPortalTick = function(portalTick) {
   this.drawShutter(alpha);
 }
 
+// -------------------------------------------------------
+// drawTextBox
+// -------------------------------------------------------
+Renderer.prototype.drawTextBox = function(say) {
+    this.context.fillStyle = "rgba(10, 10, 20, 0.95)";
+    this.context.fillRect(16, 8, 208, 64);
+    this.context.font = "10px monospace"
+    this.context.fillStyle = "white"
+    for (var i = 0; i < say.length; i++) {
+      var offset = (i * 12) + 2
+      this.context.fillText(say[i], 24, 22 + offset)
+    }
+}
+
+
 /*
 // -------------------------------------------------------
 // Renderer.mosaicEffect

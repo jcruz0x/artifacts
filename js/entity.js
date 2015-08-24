@@ -51,8 +51,8 @@ Entity.prototype.moveToMapPos = function(mapPos) {
 // MoveToMapPosRounded
 // -------------------------------------------------------
 Entity.prototype.moveToMapPosRounded = function(x, y) {
-  var mapX = (x / 16) | 0;
-  var mapY = (y / 16) | 0;
+  var mapX = (x / TILE_SIZE) | 0;
+  var mapY = (y / TILE_SIZE) | 0;
   this.moveToMapPos({ x: mapX, y: mapY });
 }
 
@@ -69,10 +69,10 @@ Entity.prototype.makeHitbox = function(xo, yo, w, h) {
 }
 
 // -------------------------------------------------------
-// Get Hitbox (default, usually will be overriden)
+// Get Hitbox (default, often will be overriden)
 // -------------------------------------------------------
 Entity.prototype.getHitbox = function() {
-  return this.makeHitbox(0, 0, 0, 0);
+  return this.makeHitbox(0, 0, 16, 16);
 }
 
 // -------------------------------------------------------
@@ -92,7 +92,7 @@ Entity.prototype.collidingWith = function(withBox) {
 }
 
 // -------------------------------------------------------
-// Sense Pop -- ALL NEEDS TO BE REDONE
+// Sense Pop
 // -------------------------------------------------------
 Entity.prototype.sensePop = function(level, sensorOffset, direction, nopop) {
 
