@@ -78,7 +78,7 @@ Villager.prototype = Object.create(Entity.prototype);
 // Villager.getFlags
 // -------------------------------------------------------
 Villager.prototype.getFlags = function() {
-  else if (this.dead == false && this.dyingTick == 0) {
+  if (this.dead == false && this.dyingTick == 0) {
     return (eFlags.hazard | eFlags.shootable);
   } 
   else {
