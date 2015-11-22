@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="28">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="73">
  <tileset firstgid="1" source="tilesheet.tsx"/>
  <tileset firstgid="257" name="tilesheet" tilewidth="16" tileheight="16" tilecount="256">
   <image source="../gfx/tilesheet.png" width="256" height="256"/>
@@ -33,6 +33,41 @@
     <property name="solid" value="true"/>
    </properties>
   </tile>
+  <tile id="10">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
   <tile id="42">
    <properties>
     <property name="solid" value="true"/>
@@ -49,6 +84,16 @@
    </properties>
   </tile>
   <tile id="45">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="47">
    <properties>
     <property name="solid" value="true"/>
    </properties>
@@ -104,6 +149,11 @@
    </properties>
   </tile>
   <tile id="61">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="62">
    <properties>
     <property name="solid" value="true"/>
    </properties>
@@ -268,6 +318,26 @@
     <property name="solid" value="true"/>
    </properties>
   </tile>
+  <tile id="117">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="120">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="123">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="124">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
  </tileset>
  <layer name="lower" width="32" height="32">
   <data encoding="csv">
@@ -311,24 +381,24 @@
 0,0,0,0,0,0,69,0,0,0,0,0,0,49,50,49,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,49,50,0,65,66,65,66,0,0,0,0,0,58,58,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,65,66,0,0,0,0,0,0,0,0,49,50,0,0,0,0,58,58,58,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,65,66,0,0,0,0,0,0,0,0,58,58,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,88,0,0,65,66,0,0,0,0,0,0,0,0,58,58,
 35,35,35,35,35,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55,0,0,0,0,
-0,0,0,0,0,0,0,0,54,0,0,53,0,0,0,0,49,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,54,0,88,53,0,0,0,0,49,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 36,36,0,0,0,0,35,0,0,0,0,69,0,0,0,0,65,66,0,0,0,0,0,0,0,0,0,45,46,0,0,0,
 0,0,33,36,36,0,0,35,35,0,0,0,0,0,0,0,0,0,0,0,49,50,0,0,0,0,0,61,62,0,0,0,
-0,0,0,0,0,33,0,0,0,35,35,0,0,0,0,0,0,0,0,0,65,66,0,43,0,0,0,0,0,0,0,0,
+0,0,0,0,0,33,0,0,0,35,35,0,0,0,0,0,0,0,0,0,65,66,0,43,0,0,0,0,0,0,88,0,
 0,0,0,0,0,0,33,36,0,0,0,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,54,0,0,0,0,0,33,0,0,0,35,0,0,0,0,0,0,0,0,43,0,0,0,17,35,35,35,35,35,35,
 0,0,0,0,0,0,53,0,0,36,0,0,0,35,35,0,0,0,0,0,0,0,0,0,0,19,0,0,0,0,0,0,
 0,45,46,0,0,0,69,0,0,0,33,0,0,0,0,35,35,35,35,35,35,35,35,35,35,38,21,36,36,36,36,36,
 0,61,62,0,0,0,0,0,0,0,0,36,36,0,0,0,0,0,0,0,0,0,21,36,36,36,34,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,36,36,36,36,0,0,0,0,36,34,0,0,0,0,0,0,0,0,0,
-0,0,0,0,49,50,0,0,0,0,0,0,0,0,0,0,0,33,36,36,36,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,82,0,0,0,0,0,36,36,36,36,0,0,0,0,36,34,0,0,0,0,0,0,0,0,0,
+0,0,0,0,49,50,0,98,0,0,0,0,0,0,0,0,0,33,36,36,36,0,0,0,0,0,88,0,0,0,0,0,
 0,0,0,0,65,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45,46,0,
 0,0,0,0,0,0,0,0,47,63,63,63,48,0,0,0,0,0,17,18,0,0,0,0,0,0,0,0,0,61,62,0,
 0,0,0,0,0,0,47,0,0,0,0,0,0,48,0,0,0,0,19,0,18,0,53,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,47,0,0,0,51,52,0,11,28,0,0,0,0,0,36,20,0,69,0,0,0,0,53,0,0,0,55,
-0,0,0,0,0,12,0,0,0,67,68,13,0,0,0,0,0,17,0,0,0,0,0,0,0,0,0,69,0,0,0,0,
+0,0,0,0,0,47,0,0,0,51,52,0,11,28,0,0,0,0,0,36,20,0,69,0,86,87,0,53,0,0,0,55,
+0,0,0,0,0,12,0,0,0,67,68,13,0,0,0,0,0,17,0,0,0,0,0,0,102,103,0,69,0,0,0,0,
 0,0,47,63,63,0,0,0,0,0,0,13,0,0,0,0,0,19,18,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,12,0,0,0,49,50,0,0,0,13,0,0,0,0,0,19,0,35,18,0,0,0,17,18,0,0,0,0,0,0,
 0,0,27,0,0,0,65,66,0,0,0,13,4,6,0,0,0,19,0,0,20,0,0,0,33,34,0,0,0,0,0,0,
@@ -341,7 +411,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="objects">
+ <objectgroup name="objects" opacity="0.9">
   <object id="1" type="portal" gid="15" x="324" y="508" width="16" height="16">
    <properties>
     <property name="level" value="testlevel"/>
@@ -377,8 +447,143 @@
   <object id="22" type="villager" gid="271" x="224" y="136" width="16" height="16"/>
   <object id="23" type="villager" gid="271" x="284" y="188" width="16" height="16"/>
   <object id="24" type="villager" gid="271" x="312" y="88" width="16" height="16"/>
-  <object id="25" type="villager" gid="271" x="384" y="96" width="16" height="16"/>
+  <object id="25" type="villager" gid="271" x="372" y="108" width="16" height="16"/>
   <object id="26" type="villager" gid="271" x="408" y="168" width="16" height="16"/>
-  <object id="27" type="boss" gid="15" x="308" y="364" width="16" height="16"/>
+  <object id="29" type="portal" gid="15" x="500" y="204" width="16" height="16">
+   <properties>
+    <property name="level" value="village"/>
+    <property name="x" value="1"/>
+    <property name="y" value="15"/>
+   </properties>
+  </object>
+  <object id="30" type="portal" gid="15" x="504" y="188" width="16" height="16">
+   <properties>
+    <property name="level" value="village"/>
+    <property name="x" value="1"/>
+    <property name="y" value="15"/>
+   </properties>
+  </object>
+  <object id="31" type="portal" gid="15" x="504" y="220" width="16" height="16">
+   <properties>
+    <property name="level" value="village"/>
+    <property name="x" value="1"/>
+    <property name="y" value="15"/>
+   </properties>
+  </object>
+  <object id="32" type="portal" gid="15" x="4" y="108" width="16" height="16">
+   <properties>
+    <property name="level" value="woods"/>
+    <property name="x" value="62"/>
+    <property name="y" value="13"/>
+   </properties>
+  </object>
+  <object id="33" type="portal" gid="15" x="8" y="92" width="16" height="16">
+   <properties>
+    <property name="level" value="woods"/>
+    <property name="x" value="62"/>
+    <property name="y" value="13"/>
+   </properties>
+  </object>
+  <object id="34" type="portal" gid="15" x="8" y="120" width="16" height="16">
+   <properties>
+    <property name="level" value="woods"/>
+    <property name="x" value="62"/>
+    <property name="y" value="13"/>
+   </properties>
+  </object>
+  <object id="35" type="pickup" gid="15" x="296" y="44" width="16" height="16">
+   <properties>
+    <property name="type" value="bigheart"/>
+   </properties>
+  </object>
+  <object id="39" type="villager" gid="15" x="148" y="176" width="16" height="16"/>
+  <object id="40" type="villager" gid="15" x="160" y="192" width="16" height="16"/>
+  <object id="42" type="villager" gid="15" x="304" y="236" width="16" height="16"/>
+  <object id="45" type="villager" gid="15" x="288" y="252" width="16" height="16"/>
+  <object id="46" type="villager" gid="15" x="452" y="188" width="16" height="16"/>
+  <object id="49" type="villager" gid="15" x="436" y="204" width="16" height="16"/>
+  <object id="51" type="villager" gid="15" x="212" y="216" width="16" height="16"/>
+  <object id="52" type="villager" gid="15" x="228" y="236" width="16" height="16"/>
+  <object id="54" type="pickup" gid="15" x="164" y="12" width="16" height="16">
+   <properties>
+    <property name="type" value="potion"/>
+   </properties>
+  </object>
+  <object id="55" type="pickup" gid="15" x="180" y="12" width="16" height="16">
+   <properties>
+    <property name="type" value="potion"/>
+   </properties>
+  </object>
+  <object id="56" type="pickup" gid="15" x="148" y="12" width="16" height="16">
+   <properties>
+    <property name="type" value="potion"/>
+   </properties>
+  </object>
+  <object id="57" type="pickup" gid="15" x="132" y="12" width="16" height="16">
+   <properties>
+    <property name="type" value="potion"/>
+   </properties>
+  </object>
+  <object id="59" type="pickup" gid="15" x="404" y="76" width="16" height="16">
+   <properties>
+    <property name="type" value="lilheart"/>
+   </properties>
+  </object>
+  <object id="60" type="pickup" gid="15" x="420" y="76" width="16" height="16">
+   <properties>
+    <property name="type" value="lilheart"/>
+   </properties>
+  </object>
+  <object id="61" type="pickup" gid="15" x="436" y="76" width="16" height="16">
+   <properties>
+    <property name="type" value="lilheart"/>
+   </properties>
+  </object>
+  <object id="62" type="pickup" gid="15" x="452" y="76" width="16" height="16">
+   <properties>
+    <property name="type" value="lilheart"/>
+   </properties>
+  </object>
+  <object id="63" type="pickup" gid="15" x="68" y="348" width="16" height="16">
+   <properties>
+    <property name="type" value="lilheart"/>
+   </properties>
+  </object>
+  <object id="64" type="pickup" gid="15" x="52" y="348" width="16" height="16">
+   <properties>
+    <property name="type" value="lilheart"/>
+   </properties>
+  </object>
+  <object id="67" type="npc" gid="271" x="420" y="264" width="16" height="16">
+   <properties>
+    <property name="say" value="a field like this is;the perfect place;for a blob"/>
+   </properties>
+  </object>
+  <object id="68" type="npc" gid="271" x="120" y="264" width="16" height="16">
+   <properties>
+    <property name="say" value="im happier dead;in death i can harm people"/>
+   </properties>
+  </object>
+  <object id="69" type="npc" gid="271" x="164" y="108" width="16" height="16">
+   <properties>
+    <property name="say" value="the dirty garment is said;to be soaked in the blood;of sacrificed virgins"/>
+   </properties>
+  </object>
+  <object id="70" type="npc" gid="271" x="484" y="152" width="16" height="16">
+   <properties>
+    <property name="say" value="i hate solid things"/>
+   </properties>
+  </object>
+  <object id="71" type="npc" gid="271" x="276" y="76" width="16" height="16">
+   <properties>
+    <property name="say" value="the sunlight burns"/>
+   </properties>
+  </object>
+  <object id="72" type="npc" gid="15" x="388" y="332" width="16" height="16">
+   <properties>
+    <property name="big" value="true"/>
+    <property name="say" value="seek the necklace first;it is the greatest power;it lies south"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

@@ -31,6 +31,41 @@
    <property name="solid" value="true"/>
   </properties>
  </tile>
+ <tile id="10">
+  <properties>
+   <property name="solid" value="true"/>
+  </properties>
+ </tile>
+ <tile id="11">
+  <properties>
+   <property name="solid" value="true"/>
+  </properties>
+ </tile>
+ <tile id="12">
+  <properties>
+   <property name="solid" value="true"/>
+  </properties>
+ </tile>
+ <tile id="26">
+  <properties>
+   <property name="solid" value="true"/>
+  </properties>
+ </tile>
+ <tile id="27">
+  <properties>
+   <property name="solid" value="true"/>
+  </properties>
+ </tile>
+ <tile id="28">
+  <properties>
+   <property name="solid" value="true"/>
+  </properties>
+ </tile>
+ <tile id="29">
+  <properties>
+   <property name="solid" value="true"/>
+  </properties>
+ </tile>
  <tile id="42">
   <properties>
    <property name="solid" value="true"/>
@@ -47,6 +82,16 @@
   </properties>
  </tile>
  <tile id="45">
+  <properties>
+   <property name="solid" value="true"/>
+  </properties>
+ </tile>
+ <tile id="46">
+  <properties>
+   <property name="solid" value="true"/>
+  </properties>
+ </tile>
+ <tile id="47">
   <properties>
    <property name="solid" value="true"/>
   </properties>
@@ -102,6 +147,11 @@
   </properties>
  </tile>
  <tile id="61">
+  <properties>
+   <property name="solid" value="true"/>
+  </properties>
+ </tile>
+ <tile id="62">
   <properties>
    <property name="solid" value="true"/>
   </properties>
@@ -266,6 +316,11 @@
    <property name="solid" value="true"/>
   </properties>
  </tile>
+ <tile id="117">
+  <properties>
+   <property name="solid" value="true"/>
+  </properties>
+ </tile>
  <tile id="120">
   <properties>
    <property name="solid" value="true"/>
@@ -277,6 +332,11 @@
   </properties>
  </tile>
  <tile id="124">
+  <properties>
+   <property name="solid" value="true"/>
+  </properties>
+ </tile>
+ <tile id="134">
   <properties>
    <property name="solid" value="true"/>
   </properties>

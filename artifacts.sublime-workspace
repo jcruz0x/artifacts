@@ -1,0 +1,500 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"alph",
+				"numeric_alphabet"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "lvl/plains.json",
+			"settings":
+			{
+				"buffer_size": 43220,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 260.0,
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				":ew",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				":sw",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				":q",
+				"Set Syntax: SQL"
+			],
+			[
+				"pack in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control:in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				":open",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"open",
+				"View: Toggle Open Files in Side Bar"
+			]
+		],
+		"width": 386.0
+	},
+	"console":
+	{
+		"height": 153.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/John/code/cosmic/js/glRenderer.js",
+		"/C/Users/John/code/cosmic/play.html",
+		"/C/Users/John/code/cosmic/js/game.js",
+		"/C/Users/John/code/cosmic/shaders/sprite.frag",
+		"/C/Users/John/code/cosmic/shaders/sprite.vert",
+		"/C/Users/John/code/js/chess/js/utility.js",
+		"/C/Users/John/Downloads/assn5.tar/assn5/assn5.c",
+		"/C/Users/John/docs/school/minwage/wage.tex",
+		"/C/Users/John/docs/school/minwage/coversheet.md",
+		"/C/Users/John/code/js/chess/js/model.js",
+		"/C/Users/John/docs/school/minwage/wage.md",
+		"/C/Users/John/docs/school/minwage/wage-plans.txt",
+		"/C/Users/John/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/John/Google Drive/notes/jpns_essay_johncruz.txt",
+		"/C/Users/John/docs/school/comm/chap10.txt",
+		"/C/Users/John/docs/school/minwage/wage-body.md",
+		"/C/Users/John/docs/school/minwage/wage-header.tex",
+		"/C/Users/John/docs/school/minwage/wage-footer.tex",
+		"/C/Users/John/docs/school/minwage/wage-cat.tex",
+		"/C/Users/John/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/John/docs/old-notes/torvalds.txt",
+		"/C/Users/John/docs/catlevels",
+		"/C/Users/John/docs/school/minwage/wage-cat-test.md",
+		"/C/Users/John/docs/school/minwage/wage-cat-test.log",
+		"/C/Users/John/docs/school/minwage/wage-body.tex",
+		"/C/Users/John/docs/school/minwage/wage-cat.toc",
+		"/C/Users/John/docs/school/minwage/wage.mmd.md",
+		"/C/Users/John/code/js/obfuscator.html",
+		"/C/Users/John/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/John/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/John/Downloads/assn4.tar/assn4/assn4/buffer.h",
+		"/C/Users/John/Downloads/assn4.tar/assn4/assn4/makefile",
+		"/C/Users/John/Downloads/assn4.tar/assn4/assn4/consumer.h",
+		"/C/Users/John/code/artifacts/postjam.txt",
+		"/C/Users/John/Downloads/assn4.tar/assn4/assn4/list.h",
+		"/C/Users/John/Downloads/assn4.tar/assn4/assn4/producer.h",
+		"/C/Users/John/Downloads/assn4.tar/assn4/assn4/assn4.c",
+		"/C/Users/John/code/artifacts2/js/renderer.js",
+		"/C/Users/John/Downloads/index.html",
+		"/C/Users/John/code/artifacts2/js/vpad.js",
+		"/C/Users/John/code/chess/js/controller.js",
+		"/C/Users/John/code/chess/chess.html",
+		"/C/Users/John/code/chess/index.html",
+		"/C/Users/John/code/chess/index.css",
+		"/C/Users/John/code/chess/chess.css",
+		"/C/Users/John/code/chess/js/view.js",
+		"/C/Users/John/code/chess/js/utility.js",
+		"/C/Users/John/code/chess/js/grid.js",
+		"/C/Users/John/code/artifacts2/js/game.js",
+		"/C/Users/John/docs/school/jpns/travelplan.md",
+		"/C/Users/John/docs/school/minwage/wage.html",
+		"/C/Users/John/docs/school/minwage/wage-plans.txg",
+		"/C/Users/John/docs/school/minwage/st.md",
+		"/C/Users/John/docs/school/minwage/source-raw.txt",
+		"/C/Users/John/docs/school/minwage/mw.bibtex",
+		"/C/Users/John/docs/school/minwage/",
+		"/C/Users/John/Downloads/paper/paper/paper_v1.md",
+		"/C/Users/John/docs/school/minwage/synth.text",
+		"/C/Users/John/docs/school/comm/emotional intelligence score.txt",
+		"/C/Users/John/docs/school/comm/CHAPTER 8 EMOTION.txt",
+		"/C/Users/John/docs/school/minwage/examples.txt",
+		"/C/Users/John/code/roboknight/level.cpp",
+		"/C/Users/John/code/roboknight/entity.cpp",
+		"/C/Users/John/code/roboknight/gfx.cpp",
+		"/C/Users/John/AppData/Roaming/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/C/Users/John/docs/school/assn2.tar/assn2/assn2/assn2.c",
+		"/C/Users/John/code/roboknight/entity.h",
+		"/C/Users/John/docs/school/minwage/synth-plans.txt",
+		"/C/Users/John/docs/school/minwage/proposal.txt",
+		"/C/Users/John/docs/school/public speaking/informative speech.txt",
+		"/C/Users/John/docs/notes/more-programming-project-thought-foolery.txt",
+		"/C/Users/John/code/cosmic/js/things.js",
+		"/C/Users/John/code/cosmic/js/grid.js",
+		"/C/Users/John/code/cosmic/js/renderer.js",
+		"/C/Users/John/code/cosmic/gfx/work/maidendeath.gal",
+		"/C/Users/John/code/cosmic/imageflipper.rb",
+		"/C/Users/John/code/cosmic/js/player.js",
+		"/C/Users/John/code/cosmic/js/enemy.js",
+		"/C/Users/John/code/cosmic/js/keyhandler.js",
+		"/C/Users/John/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/John/Downloads/ProConTest.tar/ProConTest/ProConTest/SharedMemory/producer.c",
+		"/C/Users/John/Downloads/ProConTest.tar/ProConTest/ProConTest/SharedMemory/consumer.c",
+		"/C/Users/John/docs/school/comm-journal.txt",
+		"/C/Users/John/docs/school/comm-chap6-notes.txt",
+		"/C/Users/John/code/misc-js/obfuscator.html",
+		"/C/Users/John/Downloads/ProConTest.tar/ProConTest/ProConTest/SharedMemory/MakefileProducer",
+		"/C/Users/John/Downloads/ProConTest.tar/ProConTest/ProConTest/SharedMemory/Makefile",
+		"/C/Users/John/Desktop/fizzbuzz.rb",
+		"/C/Users/John/docs/todo-week-oct-1.txt",
+		"/C/Users/John/docs/school/minwage/synthesis.txt",
+		"/C/Users/John/docs/school/minwage/synth-notes.txt",
+		"/C/Users/John/docs/portfolio goals.txt",
+		"/C/Users/John/docs/school/minwage/misc_thesis_outline_ideas.txt",
+		"/C/Users/John/code/azled/azled.rb",
+		"/C/Users/John/docs/awesome-vr-game-ideas.txt",
+		"/D/PC BACKUP 3-14-15 (PI DAY)/code/ruby/jerkport/jerkport.rb",
+		"/D/PC BACKUP 3-14-15 (PI DAY)/code/ruby/jerkport/jerkfunc.rb",
+		"/C/Users/John/code/roboknight/player.cpp",
+		"/C/Users/John/docs/school/minwage/topicpost",
+		"/C/Users/John/code/artifacts2/js/player.js",
+		"/C/Users/John/code/jam/js/renderer.js",
+		"/C/Users/John/code/postmort/post-mortem.txt",
+		"/C/Users/John/Downloads/skyrim-mods/skse_1_07_03/skse_1_07_03/src/skse/skse/GameReferences.h",
+		"/C/Users/John/Downloads/skyrim-mods/Mods/ImmersiveBeds101-35611-1-01/scripts/Source/vibMainSCT.psc",
+		"/C/Users/John/Downloads/skyrim-mods/skse_1_07_03/skse_1_07_03/src/skse/skse/GameReferences.cpp",
+		"/C/Users/John/Desktop/some-new-code.c",
+		"/C/Users/John/code/roboknight/vpad.cpp",
+		"/C/Users/John/code/roboknight/things.h",
+		"/C/Users/John/code/roboknight/player.h",
+		"/C/Users/John/code/jam/js/util.js",
+		"/C/Users/John/code/flashcards/index.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"susan",
+			"modest",
+			"mod",
+			"usepackage",
+			"}",
+			"\n ",
+			"In",
+			"...",
+			"\\section",
+			"#",
+			"ctrl+b",
+			"ctrl+f",
+			"ctrl-F",
+			"ctrl-f",
+			"written",
+			"input_count",
+			"argc",
+			"body",
+			"div",
+			"<div",
+			"div",
+			"not",
+			"Journal",
+			"#",
+			"---",
+			"			",
+			"that",
+			"oor",
+			"oth",
+			"NBER",
+			"NBE",
+			"is",
+			"“",
+			"”",
+			"side",
+			"/*",
+			"--",
+			"free",
+			"”",
+			"“",
+			"aggre",
+			"work",
+			"forbes",
+			".  ",
+			"hood",
+			"mod",
+			"gov",
+			"sor",
+			"get",
+			"info",
+			"inf",
+			"gamestatere",
+			"bracket",
+			"Contact",
+			" ))",
+			"draw",
+			"bananaMobile",
+			"hello",
+			"world",
+			"argv",
+			"die",
+			" "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "lvl/plains.json",
+					"settings":
+					{
+						"buffer_size": 43220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3462,
+								3462
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1200.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 132.0
+	},
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"wacatestmd",
+				"minwage/wage-cat-test.md"
+			],
+			[
+				"wagcate",
+				"minwage/wage-cat-test.log"
+			],
+			[
+				"wagcattoc",
+				"minwage/wage-cat.toc"
+			],
+			[
+				"wage-cat",
+				"minwage/wage-cat.tex"
+			],
+			[
+				"wage-ca",
+				"minwage/wage-cat.toc"
+			],
+			[
+				"as",
+				"assn4.c"
+			],
+			[
+				"a2",
+				"/C/Users/John/docs/school/assn2.tar/assn2/assn2/assn2.c"
+			],
+			[
+				"con",
+				"/C/Users/John/Downloads/assn4.tar/assn4/assn4/consumer.h"
+			],
+			[
+				"ass",
+				"/C/Users/John/Downloads/assn4.tar/assn4/assn4/assn4.c"
+			],
+			[
+				"pro",
+				"/C/Users/John/Downloads/assn4.tar/assn4/assn4/producer.h"
+			],
+			[
+				"lis",
+				"/C/Users/John/Downloads/assn4.tar/assn4/assn4/list.h"
+			],
+			[
+				"make",
+				"assn4/makefile"
+			],
+			[
+				"list",
+				"assn4/list.h"
+			],
+			[
+				"buf",
+				"assn4/buffer.h"
+			],
+			[
+				"endeat",
+				"cosmic/gfx/work/maidendeath.gal"
+			],
+			[
+				"imgflip",
+				"cosmic/imageflipper.rb"
+			],
+			[
+				"imgfl",
+				"cosmic/imageflipper.rb"
+			],
+			[
+				"imf",
+				"cosmic/imageflipper.rb"
+			],
+			[
+				"player",
+				"cosmic/js/player.js"
+			],
+			[
+				"key",
+				"cosmic/js/keyhandler.js"
+			],
+			[
+				"",
+				"MakefileProducer"
+			],
+			[
+				"play",
+				"player.cpp"
+			],
+			[
+				"en",
+				"entity.h"
+			],
+			[
+				"ent",
+				"entity.cpp"
+			],
+			[
+				"p",
+				"player.cpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 164.0,
+	"status_bar_visible": true
+}

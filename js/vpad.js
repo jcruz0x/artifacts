@@ -34,6 +34,8 @@ Vpad.prototype.getCode = function(button) {
       return 86;
     case 'interact':
       return 32;
+    case 'test':
+      return 84;
     default:
       return null;
   }
@@ -57,4 +59,27 @@ Vpad.prototype.pressed = function(button) {
   if (code != null) {
     return this.keyHandler.isKeyPressed(code);
   }
+}
+
+// -------------------------------------------------------
+// Check if virtual autofire button is held down and firing
+// -------------------------------------------------------
+Vpad.prototype.autofire = function(button, delay, interval) {
+  var code = this.getCode(button);
+  if (code != null) {
+    return this.keyHandler.patternCheck(
+      code, {instant: true, delay: delay, interval: interval}
+    );
+  }
+}
+
+// -------------------------------------------------------
+// get the ticks a button has been held down
+// -------------------------------------------------------
+Vpad.prototype.ticks = function(button) {
+  var code = this.getCode(button);
+  if (code != null) {
+    return this.keyHandler.getTicks(code);
+  }
+
 }

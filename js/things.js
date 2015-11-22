@@ -78,9 +78,10 @@ Villager.prototype = Object.create(Entity.prototype);
 // Villager.getFlags
 // -------------------------------------------------------
 Villager.prototype.getFlags = function() {
-  if (this.dead == false) {
+  else if (this.dead == false && this.dyingTick == 0) {
     return (eFlags.hazard | eFlags.shootable);
-  } else {
+  } 
+  else {
     return 0;
   }
 }
@@ -102,6 +103,7 @@ Villager.prototype.update = function(gamestate) {
   if (this.deathTick > 0) {
     this.deathTick--
     if (this.deathTick == 1) {
+      this.itemDrop(gamestate);
       this.dead = true;
     }
     return;
@@ -147,6 +149,30 @@ Villager.prototype.update = function(gamestate) {
   this.currPos.y = Math.max(0, this.currPos.y);
   this.currPos.y = Math.min((gamestate.level.height-1) * 16, this.currPos.y);
 }
+
+// -------------------------------------------------------
+// Get Hitbox
+// -------------------------------------------------------
+Villager.prototype.getHitbox = function() {
+  return this.makeHitbox(0, -8, 16, 24);
+}
+
+// -------------------------------------------------------
+// Villager.itemDrop
+// -------------------------------------------------------
+Villager.prototype.itemDrop = function(gamestate) {
+  var xAt = this.currPos.x;
+  var yAt = this.currPos.y
+
+  var odds = Math.random();
+  if (odds < 0.05) {
+    gamestate.level.entities.push(new Pickup(xAt, yAt, "lilheart", tweak.itemLast));
+  }
+  if (odds > 0.95) {
+    gamestate.level.entities.push(new Pickup(xAt, yAt, "potion", tweak.itemLast));
+  }
+}
+
 
 // -------------------------------------------------------
 // Villager.draw

@@ -20,18 +20,19 @@ function Game() {
   this.deltaRemaining = 0;
   this.deltaFraction = 0;
 
-  this.player = new Player(5,5);
+  this.player = new Player(16,20);
 
   this.loadLevels();
 
   // console.log(levelData.testlevel)
-  this.level = this.levels["testlevel"]
+  this.level = this.levels["eviltown"]
 
   // gameStateRef contains references to various
-  // aspects of the gamestate, and special variables
-  // passed to entity.update, etc
+  // aspects of the gamestate, and special variables.
+  // meant to be passed to entity.update, etc
   this.gameStateRef = {
     level: this.level,
+    levels: this.levels,
     player: this.player,
     vpad: this.vpad,
     portalTick: 0,

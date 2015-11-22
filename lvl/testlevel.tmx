@@ -1,6 +1,344 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="74">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="102">
  <tileset firstgid="1" source="tilesheet.tsx"/>
+ <tileset firstgid="257" name="tilesheet" tilewidth="16" tileheight="16" tilecount="256">
+  <image source="../gfx/tilesheet.png" width="256" height="256"/>
+  <tile id="2">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="43">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="44">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="64">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="65">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="66">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="67">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="68">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="69">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="70">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="73">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="74">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="75">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="76">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="77">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="80">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="81">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="82">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="83">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="84">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="85">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="86">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="87">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="88">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="89">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="90">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="96">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="97">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="98">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="99">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="101">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="102">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="103">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="104">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="105">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="117">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="120">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="123">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="124">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
  <layer name="lower" width="32" height="32">
   <data encoding="csv">
 1,1,1,3,3,3,3,3,3,3,3,3,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
@@ -48,9 +386,9 @@
 0,0,17,35,0,36,36,36,49,50,0,55,0,0,53,0,0,0,33,0,0,0,18,0,0,0,19,0,0,20,0,0,
 0,0,0,0,20,54,0,0,65,66,0,0,0,59,69,0,0,0,0,33,36,36,0,0,0,0,33,0,0,20,0,0,
 0,0,0,54,0,0,0,0,0,59,58,58,58,75,59,0,0,0,94,0,0,0,33,0,18,0,0,33,36,34,0,0,
-0,0,0,0,59,58,58,58,58,75,71,0,55,71,75,59,0,0,0,0,0,0,0,0,0,18,0,0,0,0,0,0,
-0,0,0,0,59,55,0,55,0,0,0,55,0,0,55,59,0,0,0,0,0,0,0,33,0,0,18,0,0,0,0,0,
-0,0,0,0,59,0,71,59,0,0,0,0,0,71,0,59,0,0,0,0,0,0,0,82,0,33,0,18,0,0,0,0,
+0,0,0,0,59,58,58,58,58,75,55,0,0,71,75,59,0,0,0,0,0,0,0,0,0,18,0,0,0,0,0,0,
+0,0,0,0,59,71,0,0,0,0,0,0,0,0,0,59,0,0,0,0,0,0,0,33,0,0,18,0,0,0,0,0,
+0,0,0,0,59,0,0,59,0,0,0,0,0,0,71,59,0,0,0,0,0,0,0,82,0,33,0,18,0,0,0,0,
 0,0,0,0,75,58,58,75,59,0,59,71,0,0,59,59,0,0,0,0,0,0,0,98,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,49,50,75,0,75,58,58,58,75,75,0,0,0,0,0,0,0,0,0,0,0,34,0,0,55,0,
 0,49,50,0,0,0,65,66,0,0,0,0,0,0,0,0,17,0,0,0,0,0,0,0,0,0,34,0,0,0,0,53,
@@ -62,11 +400,11 @@
 0,0,17,18,0,0,0,0,0,0,0,0,0,0,0,49,50,0,0,69,0,69,0,69,53,0,53,0,69,0,65,66,
 0,43,0,33,34,0,0,0,0,0,0,0,0,0,54,65,66,0,49,50,0,53,53,0,69,53,69,53,0,53,0,0,
 0,0,0,0,0,0,0,17,0,0,0,0,0,0,0,0,0,0,65,66,53,69,69,53,0,69,0,69,0,69,0,53,
-0,0,0,0,0,0,43,0,0,0,18,0,0,0,0,0,0,49,50,0,69,53,0,69,0,0,53,49,50,0,0,69,
-0,0,0,0,0,0,0,0,0,0,0,0,54,0,0,0,0,65,66,54,0,69,0,0,0,0,69,65,66,0,0,0,
+0,0,0,82,0,0,43,0,0,0,18,0,0,0,0,0,0,49,50,0,69,53,0,69,44,0,53,49,50,0,0,69,
+0,0,0,98,0,0,0,0,0,0,0,0,54,0,0,0,0,65,66,54,0,69,0,0,0,0,69,65,66,0,0,0,
 0,0,0,0,0,0,0,0,33,0,0,0,0,0,0,0,0,0,54,0,0,0,0,0,35,0,0,0,0,0,0,0,
-0,43,0,0,0,17,0,0,0,0,0,0,18,0,0,43,0,0,0,0,0,0,17,35,21,0,0,0,0,0,0,0,
-0,0,0,0,17,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,33,36,34,0,0,0,0,0,0,0,
+0,43,0,0,0,17,0,0,0,0,0,0,18,0,0,43,0,0,0,84,0,0,17,35,21,0,0,0,0,0,0,0,
+0,0,0,0,17,0,20,0,0,0,0,0,0,0,0,0,0,0,0,100,0,43,33,36,34,0,0,0,0,0,0,0,
 0,0,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,35,35,35,35,35,
 0,0,0,17,36,36,36,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,35,38,0,0,0,0,0,
 0,0,0,0,0,0,0,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,17,38,0,0,0,0,0,0,0,
@@ -77,13 +415,13 @@
   <object id="34" type="npc" gid="15" x="216" y="56" width="16" height="16">
    <properties>
     <property name="graphic" value="spider"/>
-    <property name="say" value="I quite enjoy EVIL,;personally!"/>
+    <property name="say" value="i eat people while;they are still alive"/>
    </properties>
   </object>
   <object id="36" type="npc" gid="15" x="375" y="203" width="16" height="16">
    <properties>
     <property name="graphic" value="skull"/>
-    <property name="say" value="Find the 4 Artifacts;of monstrosity to;challenge the hero;king"/>
+    <property name="say" value="u must find the four artifacts;of monstrosity to;challenge the hero;king"/>
    </properties>
   </object>
   <object id="39" type="portal" gid="15" x="8" y="124" width="16" height="16">
@@ -93,9 +431,8 @@
     <property name="y" value="12"/>
    </properties>
   </object>
-  <object id="40" type="NPC" gid="15" x="100.5" y="347" width="16" height="16">
+  <object id="40" type="npc" gid="15" x="248" y="312" width="16" height="16">
    <properties>
-    <property name="graphic" value="spider"/>
     <property name="say" value="I AM ERROR."/>
    </properties>
   </object>
@@ -125,8 +462,8 @@
   <object id="49" type="villager" gid="15" x="168" y="260" width="16" height="16"/>
   <object id="50" type="villager" gid="15" x="344" y="144" width="16" height="16"/>
   <object id="51" type="villager" gid="15" x="400" y="36" width="16" height="16"/>
-  <object id="52" type="villager" gid="15" x="452" y="228" width="16" height="16"/>
-  <object id="53" type="villager" gid="15" x="284" y="280" width="16" height="16"/>
+  <object id="52" type="villager" gid="15" x="452" y="240" width="16" height="16"/>
+  <object id="53" type="villager" gid="15" x="276" y="280" width="16" height="16"/>
   <object id="54" type="villager" gid="15" x="328" y="428" width="16" height="16"/>
   <object id="55" type="villager" gid="15" x="264" y="460" width="16" height="16"/>
   <object id="56" type="villager" gid="15" x="100" y="396" width="16" height="16"/>
@@ -138,44 +475,92 @@
   <object id="62" type="villager" gid="15" x="180" y="312" width="16" height="16"/>
   <object id="63" type="villager" gid="15" x="328" y="332" width="16" height="16"/>
   <object id="64" type="villager" gid="15" x="296" y="428" width="16" height="16"/>
-  <object id="65" type="pickup" gid="15" x="392" y="92" width="16" height="16">
+  <object id="65" type="pickup" gid="15" x="488" y="140" width="16" height="16">
    <properties>
     <property name="type" value="lilheart"/>
    </properties>
   </object>
-  <object id="66" type="pickup" gid="15" x="456" y="172" width="16" height="16">
+  <object id="66" type="pickup" gid="15" x="484" y="92" width="16" height="16">
    <properties>
     <property name="type" value="potion"/>
    </properties>
   </object>
-  <object id="68" type="pickup" gid="15" x="68" y="248" width="16" height="16">
+  <object id="74" type="portal" gid="15" x="500" y="412" width="16" height="16">
    <properties>
-    <property name="type" value="codpiece"/>
+    <property name="level" value="canyon"/>
+    <property name="x" value="1"/>
+    <property name="y" value="15"/>
    </properties>
   </object>
-  <object id="69" type="pickup" gid="15" x="212" y="284" width="16" height="16">
+  <object id="76" type="portal" gid="15" x="500" y="428" width="16" height="16">
    <properties>
-    <property name="type" value="garment"/>
+    <property name="level" value="canyon"/>
+    <property name="x" value="1"/>
+    <property name="y" value="15"/>
    </properties>
   </object>
-  <object id="70" type="pickup" gid="15" x="136" y="316" width="16" height="16">
+  <object id="77" type="villager" gid="15" x="212" y="476" width="16" height="16"/>
+  <object id="78" type="villager" gid="15" x="200" y="476" width="16" height="16"/>
+  <object id="79" type="villager" gid="15" x="212" y="492" width="16" height="16"/>
+  <object id="80" type="villager" gid="15" x="196" y="492" width="16" height="16"/>
+  <object id="86" type="pickup" gid="15" x="20" y="508" width="16" height="16">
    <properties>
-    <property name="type" value="cross"/>
+    <property name="type" value="lilheart"/>
    </properties>
   </object>
-  <object id="71" type="pickup" gid="15" x="244" y="364" width="16" height="16">
+  <object id="87" type="pickup" gid="15" x="4" y="508" width="16" height="16">
    <properties>
-    <property name="type" value="baby"/>
+    <property name="type" value="lilheart"/>
    </properties>
   </object>
-  <object id="72" type="pickup" gid="15" x="36" y="380" width="16" height="16">
+  <object id="88" type="pickup" gid="15" x="52" y="508" width="16" height="16">
    <properties>
-    <property name="type" value="bigheart"/>
+    <property name="type" value="lilheart"/>
    </properties>
   </object>
-  <object id="73" type="pickup" gid="15" x="116" y="412" width="16" height="16">
+  <object id="89" type="pickup" gid="15" x="36" y="508" width="16" height="16">
    <properties>
-    <property name="type" value="brain"/>
+    <property name="type" value="lilheart"/>
+   </properties>
+  </object>
+  <object id="90" type="npc" gid="15" x="88" y="168" width="16" height="16">
+   <properties>
+    <property name="say" value="several people are;buried here;honestly we dont even;know who they are"/>
+   </properties>
+  </object>
+  <object id="91" type="npc" gid="271" x="164" y="156" width="16" height="16">
+   <properties>
+    <property name="say" value="his last words were:;fuck"/>
+   </properties>
+  </object>
+  <object id="92" type="npc" gid="271" x="228" y="184" width="16" height="16">
+   <properties>
+    <property name="say" value="the tombstone says;i resented life"/>
+   </properties>
+  </object>
+  <object id="93" type="npc" gid="271" x="180" y="200" width="16" height="16">
+   <properties>
+    <property name="say" value="dont read me"/>
+   </properties>
+  </object>
+  <object id="95" type="npc" gid="271" x="56" y="392" width="16" height="16">
+   <properties>
+    <property name="say" value="The demonic necklace lies;in the fields south;of the lake"/>
+   </properties>
+  </object>
+  <object id="96" type="npc" gid="271" x="308" y="440" width="16" height="16">
+   <properties>
+    <property name="say" value="there is nothing i dont hate;the hate i feel is over-;whelming;stop talking to me"/>
+   </properties>
+  </object>
+  <object id="100" type="npc" gid="15" x="392" y="376" width="16" height="16">
+   <properties>
+    <property name="say" value="this are woods"/>
+   </properties>
+  </object>
+  <object id="101" type="npc" gid="15" x="208" y="140" width="16" height="16">
+   <properties>
+    <property name="say" value="here lies todd;at least the parts;of him;we could find"/>
    </properties>
   </object>
  </objectgroup>

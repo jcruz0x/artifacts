@@ -10,7 +10,6 @@
 function Player(mapX, mapY) {
   Entity.call(this);
   this.reset(mapX, mapY); // inits all the properties
-
   this.sensors = [
     {x: 0, y: 4, dir: DIR_LEFT},
     {x: 0, y: 12, dir: DIR_LEFT},
@@ -41,6 +40,8 @@ function Player(mapX, mapY) {
   this.hasMagic = false;
   this.hasSprint = false;
   this.hasShield = false;
+
+  this.artifacts = 0;
 }
 
 Player.prototype = Object.create(Entity.prototype);
@@ -96,28 +97,59 @@ Player.prototype.update = function(gamestate) {
 
     var vSpeed = (gamestate.vpad.down('sprint') && this.hasSprint) ? tweak.playerSprint : tweak.playerSpeed;
 
+    // if (gamestate.vpad.pressed('test')) {
+    //   // gamestate.level.fillWithVillagers();
+    //   // console.log("yo")
+    //   gamestate.level.replaceId(135, 0, 'upper')
+    // }
+
+    // var changeDir = true;
+
     var changeDir = true;
-    if (
-      (gamestate.vpad.down('up') || gamestate.vpad.down('down')) &&
-      (gamestate.vpad.down('left') || gamestate.vpad.down('right'))
-    ) {
+    if (gamestate.vpad.down('shoot') || gamestate.vpad.down('magic')) {
       changeDir = false;
     }
 
+    // if (
+    //   (gamestate.vpad.down('up') || gamestate.vpad.down('down')) &&
+    //   (gamestate.vpad.down('left') || gamestate.vpad.down('right'))
+    // ) {
+    //   changeDir = false;
+    // }
+
+    var newDirection = null;
+    var mostTicks = 0
+
+    var changeNewDir = function(ticks, newdir) {
+      if (ticks > mostTicks && changeDir) {
+        mostTicks = ticks;
+        newDirection = newdir;
+      }
+    }
+
+
     if (gamestate.vpad.down('up')) {
-      if (changeDir) this.direction = DIR_UP;
+      // if (changeDir) this.direction = DIR_UP;
+      changeNewDir(gamestate.vpad.ticks('up'), DIR_UP);
       this.velocity.y = -vSpeed
     } else if (gamestate.vpad.down('down')) {
-      if (changeDir) this.direction = DIR_DOWN;
+      // if (changeDir) this.direction = DIR_DOWN;
+      changeNewDir(gamestate.vpad.ticks('down'), DIR_DOWN);
       this.velocity.y = vSpeed
     }
 
     if (gamestate.vpad.down('left')) {
-      if (changeDir) this.direction = DIR_LEFT;
+      // if (changeDir) this.direction = DIR_LEFT;
+      changeNewDir(gamestate.vpad.ticks('left'), DIR_LEFT);
       this.velocity.x = -vSpeed
     } else if (gamestate.vpad.down('right')) {
-      if (changeDir) this.direction = DIR_RIGHT;
+      // if (changeDir) this.direction = DIR_RIGHT;
+      changeNewDir(gamestate.vpad.ticks('right'), DIR_RIGHT);
       this.velocity.x = vSpeed
+    }
+
+     if (newDirection != null) {
+       this.direction = newDirection;
     }
 
     if (this.velocity.x == 0 && this.velocity.y == 0) {
@@ -146,13 +178,13 @@ Player.prototype.update = function(gamestate) {
 
     // spawn projectiles
 
-    if (gamestate.vpad.pressed('shoot')) {
+    if (gamestate.vpad.autofire('shoot', 0, 12)) {
         gamestate.level.entities.push(
           new Bullet({x: this.currPos.x + 8, y: this.currPos.y}, rockVel[this.direction], 'rock', 'evil')
         )
     }
 
-    if (gamestate.vpad.pressed('magic') && this.mana > 0 && this.hasMagic) {
+    if (gamestate.vpad.autofire('magic', 0, 12) && this.mana > 0 && this.hasMagic) {
         this.mana--;
         var firelist = fireVel[this.direction];
         for (var i = 0; i < firelist.length; i++) {
@@ -324,7 +356,7 @@ Player.prototype.powerUp = function(powerup, gamestate) {
         'by one bar'
       ];
       this.maxMana += tweak.manaRatio;
-      this.mana = this.maxMana;
+      this.mana += tweak.manaRatio;
     break;
     case 'bigheart':
       gamestate.say = [
@@ -333,15 +365,20 @@ Player.prototype.powerUp = function(powerup, gamestate) {
         'by one bar'
       ];
       this.maxHealth++;
-      this.health = this.maxHealth;
+      this.health++;
     break;
     case 'baby':
-      // gamestate.say = [
-      //   'ate baby. got full',
-      //   'health and manas'
-      // ];
+       gamestate.say = [
+         'ate baby. got full',
+         'health and manas'
+       ];
       this.health = this.maxHealth;
       this.mana = this.maxMana;
     break;
+  }
+
+  if (gamestate.artifacts >= 4) {
+    console.log("did it")
+    gamestate.levels.castle.replaceId(135, 0, 'upper');
   }
 }

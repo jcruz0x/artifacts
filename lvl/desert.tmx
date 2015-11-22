@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="70">
+ <tileset firstgid="1" name="tilesheet" tilewidth="16" tileheight="16" tilecount="256">
+  <image source="../gfx/tilesheet.png" width="256" height="256"/>
+  <tile id="2">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="43">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="44">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="64">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="65">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="66">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="67">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="68">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="69">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="70">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="73">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="74">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="75">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="76">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="77">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="80">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="81">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="82">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="83">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="84">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="85">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="86">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="87">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="88">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="89">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="90">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="96">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="97">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="98">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="99">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="101">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="102">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="103">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="104">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="105">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="117">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="120">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="123">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="124">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="257" name="tilesheet" tilewidth="16" tileheight="16" tilecount="256">
+  <image source="../gfx/tilesheet.png" width="256" height="256"/>
+  <tile id="2">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="43">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="44">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="64">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="65">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="66">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="67">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="68">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="69">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="70">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="73">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="74">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="75">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="76">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="77">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="80">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="81">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="82">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="83">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="84">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="85">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="86">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="87">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="88">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="89">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="90">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="96">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="97">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="98">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="99">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="101">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="102">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="103">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="104">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="105">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="117">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="120">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="123">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+  <tile id="124">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="lower" width="32" height="32" opacity="0.9">
+  <data encoding="csv">
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,2,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,2,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,10,10,59,10,10,10,59,10,59,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,10,10,7,10,10,10,75,10,75,10,59,59,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,2,10,10,10,7,10,10,10,10,10,10,10,75,75,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,10,10,10,7,10,10,10,10,10,10,10,10,7,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,10,10,10,59,10,10,10,10,10,10,10,59,59,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,2,2,2,10,10,10,10,75,10,59,10,10,10,59,10,75,75,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,2,2,2,10,10,10,10,10,10,10,75,10,59,10,75,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,2,2,2,2,2,10,10,10,10,10,10,10,10,10,10,75,10,10,10,10,10,10,10,10,10,
+2,2,2,2,2,2,2,2,2,2,2,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+2,2,2,2,2,2,2,2,2,2,2,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,2,2,2,2,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,2,2,2,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,2,2,2,2,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,2,2,2,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,2,2,2,10,10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,2,
+10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,10,10,10,10,10,10,10,10,10,10,10,2,2,2,2,2,2,
+10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,2,10,10,10,10,10,10,10,10,10,2,2,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,2,2,10,10,10,10,10,10,2,2,2,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,2,2,2,2,2,2,2,2,2,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,2,2,2,2,2,2,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10
+</data>
+ </layer>
+ <layer name="upper" width="32" height="32">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,50,0,0,0,0,0,0,0,0,
+0,0,0,81,0,0,60,0,0,49,50,0,0,0,23,0,0,0,0,0,0,0,65,66,0,0,0,0,0,0,0,0,
+0,0,0,97,0,0,0,0,0,65,66,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,81,81,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,49,50,0,0,0,0,0,0,97,97,0,0,
+0,0,0,0,0,0,85,0,0,0,0,0,0,0,0,0,0,0,0,0,65,66,0,81,0,0,0,0,0,0,0,0,
+0,49,50,0,0,0,0,0,81,0,0,0,0,0,0,0,0,0,0,58,58,58,0,97,0,0,0,0,0,0,0,0,
+0,65,66,0,0,60,0,0,97,0,0,0,0,0,0,40,0,0,0,71,0,0,0,58,0,58,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,55,0,0,0,55,0,0,0,81,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,23,0,0,0,0,0,0,0,0,0,71,0,0,0,0,0,97,0,0,
+0,0,81,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,97,0,0,0,0,60,0,0,0,23,0,40,0,0,0,0,0,58,0,0,0,0,0,58,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,23,0,0,0,0,0,49,50,0,0,0,0,0,58,0,81,0,0,0,0,0,0,
+0,0,0,0,0,0,0,23,0,0,0,40,0,0,0,0,65,66,0,0,44,0,0,0,0,97,0,0,0,0,0,0,
+41,41,41,41,41,41,41,0,0,0,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+25,25,25,25,25,25,25,25,0,0,42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,39,0,0,42,0,0,0,0,0,60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,42,0,0,0,0,0,81,0,0,0,0,0,0,49,50,0,0,0,0,0,
+0,0,0,0,0,49,50,0,0,0,39,0,0,42,0,0,0,82,97,0,0,0,0,0,0,65,66,0,81,0,0,0,
+0,0,0,81,0,65,66,0,0,0,0,39,0,0,0,0,0,98,0,0,0,0,0,0,0,0,0,0,97,0,0,0,
+0,0,0,97,0,0,82,0,0,0,0,0,39,0,24,0,0,0,0,49,50,0,60,0,0,0,0,0,0,23,0,0,
+0,0,0,0,0,0,98,0,81,0,0,0,0,0,0,0,0,0,0,65,66,0,0,0,0,0,23,0,0,0,0,0,
+0,49,50,0,0,0,0,0,97,0,0,0,0,39,0,24,0,0,0,0,0,0,0,0,0,23,0,0,0,0,0,0,
+0,65,66,0,0,0,0,0,0,0,0,0,0,0,39,0,0,24,24,0,0,0,0,0,23,0,81,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,39,0,0,0,41,41,41,41,0,0,40,97,0,0,0,0,0,
+0,0,0,0,81,0,0,49,50,0,0,0,0,0,0,0,0,0,39,25,25,25,25,40,0,0,0,0,0,0,0,0,
+0,0,0,0,97,0,0,65,66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,41,41,0,0,81,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,81,0,0,0,0,41,41,82,41,41,41,41,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,81,0,0,0,0,97,0,0,0,0,0,0,98,0,0,0,0,0,49,50,0,0,0,0,0,0,
+0,0,0,0,0,0,97,0,0,0,0,0,0,0,0,0,0,81,0,0,0,0,0,0,65,66,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,97,0,0,0,0,0,0,0,0,0,0,0,81,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,97,0,0
+</data>
+ </layer>
+ <objectgroup name="objects">
+  <object id="1" type="villager" gid="271" x="80" y="136" width="16" height="16"/>
+  <object id="2" type="villager" gid="271" x="180" y="76" width="16" height="16"/>
+  <object id="3" type="villager" gid="271" x="148" y="124" width="16" height="16"/>
+  <object id="4" type="villager" gid="271" x="160" y="160" width="16" height="16"/>
+  <object id="5" type="villager" gid="271" x="72" y="60" width="16" height="16"/>
+  <object id="6" type="villager" gid="271" x="48" y="120" width="16" height="16"/>
+  <object id="7" type="villager" gid="271" x="60" y="164" width="16" height="16"/>
+  <object id="8" type="villager" gid="271" x="120" y="60" width="16" height="16"/>
+  <object id="9" type="villager" gid="271" x="296" y="24" width="16" height="16"/>
+  <object id="10" type="villager" gid="271" x="328" y="236" width="16" height="16"/>
+  <object id="11" type="villager" gid="271" x="348" y="268" width="16" height="16"/>
+  <object id="12" type="villager" gid="271" x="324" y="280" width="16" height="16"/>
+  <object id="13" type="villager" gid="271" x="400" y="304" width="16" height="16"/>
+  <object id="14" type="villager" gid="271" x="356" y="340" width="16" height="16"/>
+  <object id="15" type="villager" gid="271" x="272" y="436" width="16" height="16"/>
+  <object id="16" type="villager" gid="271" x="212" y="384" width="16" height="16"/>
+  <object id="17" type="villager" gid="271" x="160" y="416" width="16" height="16"/>
+  <object id="18" type="villager" gid="271" x="176" y="356" width="16" height="16"/>
+  <object id="19" type="villager" gid="271" x="72" y="332" width="16" height="16"/>
+  <object id="20" type="villager" gid="271" x="92" y="376" width="16" height="16"/>
+  <object id="21" type="villager" gid="271" x="44" y="436" width="16" height="16"/>
+  <object id="22" type="villager" gid="271" x="20" y="480" width="16" height="16"/>
+  <object id="23" type="villager" gid="271" x="128" y="484" width="16" height="16"/>
+  <object id="24" type="villager" gid="271" x="136" y="444" width="16" height="16"/>
+  <object id="25" type="villager" gid="271" x="236" y="468" width="16" height="16"/>
+  <object id="26" type="villager" gid="271" x="200" y="488" width="16" height="16"/>
+  <object id="27" type="villager" gid="271" x="244" y="400" width="16" height="16"/>
+  <object id="28" type="villager" gid="271" x="340" y="452" width="16" height="16"/>
+  <object id="29" type="villager" gid="271" x="324" y="488" width="16" height="16"/>
+  <object id="30" type="villager" gid="271" x="468" y="380" width="16" height="16"/>
+  <object id="31" type="villager" gid="271" x="412" y="412" width="16" height="16"/>
+  <object id="32" type="villager" gid="271" x="448" y="432" width="16" height="16"/>
+  <object id="33" type="villager" gid="271" x="436" y="460" width="16" height="16"/>
+  <object id="34" type="villager" gid="271" x="480" y="228" width="16" height="16"/>
+  <object id="35" type="villager" gid="271" x="452" y="236" width="16" height="16"/>
+  <object id="36" type="villager" gid="271" x="416" y="32" width="16" height="16"/>
+  <object id="37" type="villager" gid="271" x="216" y="224" width="16" height="16"/>
+  <object id="38" type="portal" gid="15" x="4" y="220" width="16" height="16">
+   <properties>
+    <property name="level" value="southlake"/>
+    <property name="x" value="30"/>
+    <property name="y" value="15"/>
+   </properties>
+  </object>
+  <object id="39" type="portal" gid="15" x="4" y="232" width="16" height="16">
+   <properties>
+    <property name="level" value="southlake"/>
+    <property name="x" value="30"/>
+    <property name="y" value="16"/>
+   </properties>
+  </object>
+  <object id="41" type="portal" gid="15" x="248" y="12" width="16" height="16">
+   <properties>
+    <property name="level" value="canyon"/>
+    <property name="x" value="16"/>
+    <property name="y" value="30"/>
+   </properties>
+  </object>
+  <object id="42" type="portal" gid="15" x="260" y="12" width="16" height="16">
+   <properties>
+    <property name="level" value="canyon"/>
+    <property name="x" value="17"/>
+    <property name="y" value="30"/>
+   </properties>
+  </object>
+  <object id="43" type="portal" gid="15" x="500" y="316" width="16" height="16">
+   <properties>
+    <property name="level" value="desert2"/>
+    <property name="x" value="1"/>
+    <property name="y" value="13"/>
+   </properties>
+  </object>
+  <object id="44" type="portal" gid="15" x="504" y="332" width="16" height="16">
+   <properties>
+    <property name="level" value="desert2"/>
+    <property name="x" value="1"/>
+    <property name="y" value="14"/>
+   </properties>
+  </object>
+  <object id="45" type="pickup" gid="15" x="344" y="152" width="16" height="16">
+   <properties>
+    <property name="type" value="bigheart"/>
+   </properties>
+  </object>
+  <object id="46" type="pickup" gid="15" x="4" y="508" width="16" height="16">
+   <properties>
+    <property name="type" value="brain"/>
+   </properties>
+  </object>
+  <object id="52" type="pickup" gid="15" x="500" y="508" width="16" height="16">
+   <properties>
+    <property name="type" value="potion"/>
+   </properties>
+  </object>
+  <object id="54" type="pickup" gid="15" x="436" y="508" width="16" height="16">
+   <properties>
+    <property name="type" value="potion"/>
+   </properties>
+  </object>
+  <object id="55" type="pickup" gid="15" x="436" y="188" width="16" height="16">
+   <properties>
+    <property name="type" value="lilheart"/>
+   </properties>
+  </object>
+  <object id="56" type="pickup" gid="15" x="420" y="188" width="16" height="16">
+   <properties>
+    <property name="type" value="lilheart"/>
+   </properties>
+  </object>
+  <object id="57" type="pickup" gid="15" x="372" y="480" width="16" height="16">
+   <properties>
+    <property name="type" value="lilheart"/>
+   </properties>
+  </object>
+  <object id="58" type="pickup" gid="15" x="36" y="384" width="16" height="16">
+   <properties>
+    <property name="type" value="lilheart"/>
+   </properties>
+  </object>
+  <object id="60" type="npc" gid="271" x="100" y="328" width="16" height="16">
+   <properties>
+    <property name="say" value="i'm getting kinda bone dry"/>
+   </properties>
+  </object>
+  <object id="61" type="npc" gid="271" x="292" y="456" width="16" height="16">
+   <properties>
+    <property name="say" value="i wanted a tan but;im getting a little bleached"/>
+   </properties>
+  </object>
+  <object id="62" type="npc" gid="271" x="276" y="296" width="16" height="16">
+   <properties>
+    <property name="say" value="the hero king has;slain many monsters"/>
+   </properties>
+  </object>
+  <object id="63" type="npc" gid="271" x="100" y="76" width="16" height="16">
+   <properties>
+    <property name="say" value="its hot out here;im dying"/>
+   </properties>
+  </object>
+  <object id="64" type="npc" gid="271" x="376" y="140" width="16" height="16">
+   <properties>
+    <property name="say" value="here lies sam;no one loved him"/>
+   </properties>
+  </object>
+  <object id="65" type="npc" gid="271" x="312" y="104" width="16" height="16">
+   <properties>
+    <property name="say" value="instead of a name;this grave just has;a hilarious penis doodle"/>
+   </properties>
+  </object>
+  <object id="66" type="npc" gid="271" x="328" y="200" width="16" height="16">
+   <properties>
+    <property name="say" value="a graveyard full of people;that nobody liked"/>
+   </properties>
+  </object>
+  <object id="67" type="npc" gid="15" x="344" y="124" width="16" height="16">
+   <properties>
+    <property name="say" value="bob died last year;not actually buried here;he was too fat to;drag all that way"/>
+   </properties>
+  </object>
+  <object id="69" type="npc" gid="15" x="408" y="124" width="16" height="16">
+   <properties>
+    <property name="say" value="here lies jim;he was tortured to death;and deserved it"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

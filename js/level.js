@@ -102,3 +102,55 @@ Level.prototype.makeTileRect = function(sensorPos, isSmall) {
     h: size
   }
 }
+
+// -------------------------------------------------------
+// replaceId
+// -------------------------------------------------------
+Level.prototype.replaceId = function(original, replacement, layer) {
+  var data = layer == 'upper' ? this.upper : this.lower;
+  data.foreach(function(x,y,val) {
+    return val == original ? replacement : val;
+  });
+  // for (var x = 0; x < this.upper.width; x++) {
+  //   for (var y = 0; y < this.upper.height; y++) {
+  //     if (this.upper.at(x, y) == original) {
+  //       this.upper.set(x, y, replacement)
+  //     }
+  //   }
+  // }
+
+}
+
+// -------------------------------------------------------
+// fillWithVillagers
+// -------------------------------------------------------
+Level.prototype.fillWithVillagers = function() {
+  var spacing = tweak.villagerSpawnSpacing
+  for (var x = 0; x < this.width; x += spacing) {
+    for (var y = 0; y < this.height; y += spacing) {
+      var xWiggle = ((Math.random() * 8) | 0) - 4;
+      var yWiggle = ((Math.random() * 8) | 0) - 4;
+      var mapX = ((x + xWiggle) / TILE_SIZE) | 0;
+      var mapY = ((y + yWiggle) / TILE_SIZE) | 0;
+      if (this.checkSolid(mapX, mapY) == false) {
+        this.entities.push(new Villager({
+          x: mapX * TILE_SIZE,
+          y: mapY * TILE_SIZE
+        }));
+      }
+    }
+  }
+}
+
+// -------------------------------------------------------
+// checkSolid
+// -------------------------------------------------------
+Level.prototype.checkSolid = function(mapX, mapY) {
+  var uppertile = this.upper.at(mapX, mapY);
+  var lowertile = this.lower.at(mapX, mapY);
+
+  var upperProps = tileData[uppertile] || {};
+  var lowerProps = tileData[lowertile] || {};
+
+  return (lowerProps['solid'] == 'true' || upperProps['solid'] == 'true');
+}

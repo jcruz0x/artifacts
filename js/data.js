@@ -29,19 +29,22 @@ var DIR_LEFT = 3;
 // -------------------------------------------------------
 var tweak = {
   playerSpeed: 1.8,
-  playerSprint: 2.5,
+  playerSprint: 2.7,
   shieldTime: 180,
   shieldCool: 200,
   portalTime: 16,
   shutterHold: 3,
   villagerSpeed: 1,
   startHealth: 5,
-  startMana: 5,
+  startMana: 2,
   manaRatio: 5,
   hurtTickTime: 20,
   hurtFlashDiff: 10,
   playerDeathTick: 64,
-  rockVel: 5
+  rockVel: 5,
+  villagerSpawnSpacing: 128,
+  itemLast: 270,
+  itemBlink: 90
 }
 
 // =======================================================

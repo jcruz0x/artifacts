@@ -15,12 +15,23 @@ function DrawUI(gamestate, renderer) {
     renderer.drawGraphic(graphic, 1 + offset, 1);
   }
 
-  if (gamestate.player.hasMagic || gamestate.player.hasShield) {
-    for (var i = 0; i < maxMana; i++) {
-      var graphic = (mana > i) ? "mana-filled" : "mana-empty";
-      var offset = i * 7;
-      renderer.drawGraphic(graphic, 1 + offset, 10);
-    }
+  for (var i = 0; i < maxMana; i++) {
+    var graphic = (mana > i) ? "mana-filled" : "mana-empty";
+    var offset = i * 7;
+    renderer.drawGraphic(graphic, 1 + offset, 10);
   }
-    
+
+  renderer.drawGraphic("iconrock", 4, 140);
+
+  if (gamestate.player.hasMagic) {
+    renderer.drawGraphic("iconfball", 24, 140);
+  }
+
+  if (gamestate.player.hasSprint) {
+    renderer.drawGraphic("iconsprint", 44, 140);
+  }
+
+  if (gamestate.player.hasShield) {
+    renderer.drawGraphic("iconshield", 64, 140);
+  }
 }

@@ -60,11 +60,18 @@ KeyHandler.prototype.patternCheck = function(keycode, pattern) {
     return true;
   }
   if (ticks > pattern.delay) {
-    var postTicks = ticks - delay
+    var postTicks = ticks - pattern.delay
     if (postTicks % pattern.interval == 0) {
       return true;
     }
   }
 
   return false;
+}
+
+// -------------------------------------------------------
+// Return the ticks for a given key
+// -------------------------------------------------------
+KeyHandler.prototype.getTicks = function(keycode) {
+  return this.keyTicks[keycode];
 }

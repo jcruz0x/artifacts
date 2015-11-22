@@ -34,7 +34,7 @@ function Grid(xSize, ySize, initializer) {
 Grid.prototype.foreach = function (func) {
   for (var x in this.gridData) {
     for (var y in this.gridData[x]) {
-      this.gridData[x][y] = func(x, y);
+      this.gridData[x][y] = func(x, y, this.gridData[x][y]);
     }
   }
 }

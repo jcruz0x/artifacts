@@ -1,0 +1,16 @@
+
+
+Artifacts Post-Jam Features:
+
+* Work on maps, add more dungeon layers
+* Fix Broken Signs / Monsters etc.
+* More Monster types to talk to
+* SFX, Music
+* New Enemy Types:
+    - Tough Guys that take multiple hits
+    - Fast Kids
+    - Old Men That Shoot Fire
+    - Mini Boss Guys With Swinging Chain
+* Final Boss Has multiple stages, multiple sizes
+* Title Screen, Menus?, Better Ending
+* Fix Bugs

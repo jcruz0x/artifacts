@@ -1,4 +1,7 @@
 var tileData = {
+  "10": {
+    "solid": "true"
+  },
   "101": {
     "solid": "true"
   },
@@ -14,13 +17,40 @@ var tileData = {
   "105": {
     "solid": "true"
   },
+  "11": {
+    "solid": "true"
+  },
+  "117": {
+    "solid": "true"
+  },
+  "12": {
+    "solid": "true"
+  },
+  "120": {
+    "solid": "true"
+  },
   "123": {
     "solid": "true"
   },
   "124": {
     "solid": "true"
   },
+  "134": {
+    "solid": "true"
+  },
   "2": {
+    "solid": "true"
+  },
+  "26": {
+    "solid": "true"
+  },
+  "27": {
+    "solid": "true"
+  },
+  "28": {
+    "solid": "true"
+  },
+  "29": {
     "solid": "true"
   },
   "3": {
@@ -39,6 +69,12 @@ var tileData = {
     "solid": "true"
   },
   "45": {
+    "solid": "true"
+  },
+  "46": {
+    "solid": "true"
+  },
+  "47": {
     "solid": "true"
   },
   "48": {
@@ -75,6 +111,9 @@ var tileData = {
     "solid": "true"
   },
   "61": {
+    "solid": "true"
+  },
+  "62": {
     "solid": "true"
   },
   "64": {
