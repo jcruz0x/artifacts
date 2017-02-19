@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"head",
+				"headOffsetY"
+			],
+			[
+				"body",
+				"bodySprites"
+			],
+			[
+				"dama",
+				"damage_suffix"
+			],
+			[
 				"alph",
 				"numeric_alphabet"
 			]
@@ -11,14 +23,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "lvl/plains.json",
-			"settings":
-			{
-				"buffer_size": 43220,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -28,6 +32,10 @@
 		[
 			[
 				":w",
+				":w - Save"
+			],
+			[
+				":W",
 				":w - Save"
 			],
 			[
@@ -75,7 +83,7 @@
 				"View: Toggle Open Files in Side Bar"
 			]
 		],
-		"width": 386.0
+		"width": 402.0
 	},
 	"console":
 	{
@@ -92,6 +100,17 @@
 	},
 	"file_history":
 	[
+		"/C/Users/John/code/artifacts/postjam.txt",
+		"/C/Users/John/code/artifacts/js/things.js",
+		"/C/Users/John/code/artifacts/js/data.js",
+		"/C/Users/John/code/artifacts/js/enemies.js",
+		"/C/Users/John/code/artifacts/js/entity.js",
+		"/C/Users/John/code/artifacts/js/boss.js",
+		"/C/Users/John/code/artifacts/play.html",
+		"/C/Users/John/code/artifacts/js/creatures.js",
+		"/C/Users/John/code/artifacts/js/drawui.js",
+		"/C/Users/John/code/js/obfuscator.html",
+		"/C/Users/John/code/artifacts/lvl/plains.json",
 		"/C/Users/John/code/cosmic/js/glRenderer.js",
 		"/C/Users/John/code/cosmic/play.html",
 		"/C/Users/John/code/cosmic/js/game.js",
@@ -119,13 +138,11 @@
 		"/C/Users/John/docs/school/minwage/wage-body.tex",
 		"/C/Users/John/docs/school/minwage/wage-cat.toc",
 		"/C/Users/John/docs/school/minwage/wage.mmd.md",
-		"/C/Users/John/code/js/obfuscator.html",
 		"/C/Users/John/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
 		"/C/Users/John/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
 		"/C/Users/John/Downloads/assn4.tar/assn4/assn4/buffer.h",
 		"/C/Users/John/Downloads/assn4.tar/assn4/assn4/makefile",
 		"/C/Users/John/Downloads/assn4.tar/assn4/assn4/consumer.h",
-		"/C/Users/John/code/artifacts/postjam.txt",
 		"/C/Users/John/Downloads/assn4.tar/assn4/assn4/list.h",
 		"/C/Users/John/Downloads/assn4.tar/assn4/assn4/producer.h",
 		"/C/Users/John/Downloads/assn4.tar/assn4/assn4/assn4.c",
@@ -220,6 +237,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"16",
+			"12",
 			"susan",
 			"modest",
 			"mod",
@@ -301,37 +320,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "lvl/plains.json",
-					"settings":
-					{
-						"buffer_size": 43220,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3462,
-								3462
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1200.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -341,7 +331,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 38.0
 	},
 	"layout":
 	{

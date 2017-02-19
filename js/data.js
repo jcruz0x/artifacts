@@ -44,7 +44,8 @@ var tweak = {
   rockVel: 5,
   villagerSpawnSpacing: 128,
   itemLast: 270,
-  itemBlink: 90
+  itemBlink: 90,
+  mofoHealth: 20
 }
 
 // =======================================================

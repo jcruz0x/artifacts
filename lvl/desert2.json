@@ -237,7 +237,7 @@
                      "say":"whoever died here;it was really;really really;long time ago"
                     },
                  "rotation":0,
-                 "type":"",
+                 "type":"npc",
                  "visible":true,
                  "width":16,
                  "x":148,

@@ -142,7 +142,7 @@
     <property name="type" value="lilheart"/>
    </properties>
   </object>
-  <object id="13" gid="15" x="148" y="184" width="16" height="16">
+  <object id="13" type="npc" gid="15" x="148" y="184" width="16" height="16">
    <properties>
     <property name="say" value="whoever died here;it was really;really really;long time ago"/>
    </properties>

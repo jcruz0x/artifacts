@@ -457,18 +457,34 @@
     <property name="y" value="30"/>
    </properties>
   </object>
-  <object id="45" type="villager" gid="15" x="260" y="120" width="16" height="16"/>
+  <object id="45" type="villager" gid="15" x="260" y="120" width="16" height="16">
+   <properties>
+    <property name="kind" value="baby"/>
+   </properties>
+  </object>
   <object id="48" type="villager" gid="15" x="284" y="196" width="16" height="16"/>
   <object id="49" type="villager" gid="15" x="168" y="260" width="16" height="16"/>
-  <object id="50" type="villager" gid="15" x="344" y="144" width="16" height="16"/>
+  <object id="50" type="villager" gid="15" x="344" y="144" width="16" height="16">
+   <properties>
+    <property name="kind" value="mofo"/>
+   </properties>
+  </object>
   <object id="51" type="villager" gid="15" x="400" y="36" width="16" height="16"/>
   <object id="52" type="villager" gid="15" x="452" y="240" width="16" height="16"/>
   <object id="53" type="villager" gid="15" x="276" y="280" width="16" height="16"/>
   <object id="54" type="villager" gid="15" x="328" y="428" width="16" height="16"/>
   <object id="55" type="villager" gid="15" x="264" y="460" width="16" height="16"/>
   <object id="56" type="villager" gid="15" x="100" y="396" width="16" height="16"/>
-  <object id="57" type="villager" gid="15" x="52" y="428" width="16" height="16"/>
-  <object id="58" type="villager" gid="15" x="140" y="456" width="16" height="16"/>
+  <object id="57" type="villager" gid="15" x="52" y="428" width="16" height="16">
+   <properties>
+    <property name="kind" value="baby"/>
+   </properties>
+  </object>
+  <object id="58" type="villager" gid="15" x="140" y="456" width="16" height="16">
+   <properties>
+    <property name="kind" value="mofo"/>
+   </properties>
+  </object>
   <object id="59" type="villager" gid="15" x="40" y="312" width="16" height="16"/>
   <object id="60" type="villager" gid="15" x="32" y="276" width="16" height="16"/>
   <object id="61" type="villager" gid="15" x="260" y="252" width="16" height="16"/>
@@ -482,6 +498,7 @@
   </object>
   <object id="66" type="pickup" gid="15" x="484" y="92" width="16" height="16">
    <properties>
+    <property name="kind" value="mofo"/>
     <property name="type" value="potion"/>
    </properties>
   </object>
@@ -500,8 +517,16 @@
    </properties>
   </object>
   <object id="77" type="villager" gid="15" x="212" y="476" width="16" height="16"/>
-  <object id="78" type="villager" gid="15" x="200" y="476" width="16" height="16"/>
-  <object id="79" type="villager" gid="15" x="212" y="492" width="16" height="16"/>
+  <object id="78" type="villager" gid="15" x="200" y="476" width="16" height="16">
+   <properties>
+    <property name="kind" value="baby"/>
+   </properties>
+  </object>
+  <object id="79" type="villager" gid="15" x="212" y="492" width="16" height="16">
+   <properties>
+    <property name="kind" value="baby"/>
+   </properties>
+  </object>
   <object id="80" type="villager" gid="15" x="196" y="492" width="16" height="16"/>
   <object id="86" type="pickup" gid="15" x="20" y="508" width="16" height="16">
    <properties>

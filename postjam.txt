@@ -3,6 +3,10 @@
 Artifacts Post-Jam Features:
 
 * Work on maps, add more dungeon layers
+* add a few extra areas
+* add a fifth artifact?
+* up north, adds a super attack
+* make the shield better
 * Fix Broken Signs / Monsters etc.
 * More Monster types to talk to
 * SFX, Music
@@ -14,3 +18,44 @@ Artifacts Post-Jam Features:
 * Final Boss Has multiple stages, multiple sizes
 * Title Screen, Menus?, Better Ending
 * Fix Bugs
+
+==== thoughts 2/18/17 ====
+
+* add a few more small maps
+	- side areas
+	- extra dungeon layers? (3 in each?)
+	- go inside buildings?
+* upgrade existing maps
+	- add new tiles here and there
+	- make sure everything talks, can be read
+	- add new enemy types into there
+* add music (compress those songs down, alot)
+	- music always changes on map switch
+	- many areas are silent
+	- looping surf/wind sound on some areas
+* refactor code:
+	- redesign a lot of stuff to make more sense
+	- base enemy class that otheres inherit from?
+* new features:
+	- tnt barrels
+	- swinging chain minibosses
+	- old men that shoot fire (at player)
+* better mechanics, bug fixes, ui improvements
+	- dont pick up health / mana when full
+	- delay on skipping powerup get messages
+	- shield artifact now attacks
+* sound effects for everything
+	- make them all in bfxr
+* better pizazz:
+	- sparkles when dashing
+	- straight line when dashing = dash attack
+	- screen shake?
+* title screen, better ending screen
+* title screen includes loading information
+* improve some of the artwork, better tiling
+* better final boss:
+	- a lot more hp
+	- faster, and tends to navigate towards player
+	- shoots fire in all directions
+	- shoots energy ball right at player
+	- surrounded by minibosses 

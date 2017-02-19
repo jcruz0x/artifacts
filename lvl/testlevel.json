@@ -156,7 +156,7 @@
                  "name":"",
                  "properties":
                     {
-
+                     "kind":"baby"
                     },
                  "rotation":0,
                  "type":"villager",
@@ -204,7 +204,7 @@
                  "name":"",
                  "properties":
                     {
-
+                     "kind":"mofo"
                     },
                  "rotation":0,
                  "type":"villager",
@@ -316,7 +316,7 @@
                  "name":"",
                  "properties":
                     {
-
+                     "kind":"baby"
                     },
                  "rotation":0,
                  "type":"villager",
@@ -332,7 +332,7 @@
                  "name":"",
                  "properties":
                     {
-
+                     "kind":"mofo"
                     },
                  "rotation":0,
                  "type":"villager",
@@ -460,6 +460,7 @@
                  "name":"",
                  "properties":
                     {
+                     "kind":"mofo",
                      "type":"potion"
                     },
                  "rotation":0,
@@ -528,7 +529,7 @@
                  "name":"",
                  "properties":
                     {
-
+                     "kind":"baby"
                     },
                  "rotation":0,
                  "type":"villager",
@@ -544,7 +545,7 @@
                  "name":"",
                  "properties":
                     {
-
+                     "kind":"baby"
                     },
                  "rotation":0,
                  "type":"villager",

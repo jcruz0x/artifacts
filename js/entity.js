@@ -95,7 +95,6 @@ Entity.prototype.collidingWith = function(withBox) {
 // Sense Pop
 // -------------------------------------------------------
 Entity.prototype.sensePop = function(level, sensorOffset, direction, nopop) {
-
   var sensorPos = { x: sensorOffset.x + this.currPos.x, y: sensorOffset.y + this.currPos.y };
 
   var upperTile = level.tileAt(sensorPos, level.upper);
@@ -105,7 +104,7 @@ Entity.prototype.sensePop = function(level, sensorOffset, direction, nopop) {
   var lowerProps = tileData[lowerTile - 1] || {};
 
   var tileBox = level.makeTileRect(sensorPos, false);
-  var thisBox = this.getHitbox();
+  var thisBox = this.getHitbox(true);
 
   var isSolid = (upperProps["solid"] == "true" || lowerProps["solid"] == "true");
 

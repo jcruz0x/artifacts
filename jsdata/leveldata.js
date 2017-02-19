@@ -20313,7 +20313,7 @@ var levelData = {
         "properties": {
           "say": "whoever died here;it was really;really really;long time ago"
         },
-        "type": "",
+        "type": "npc",
         "x": 148,
         "y": 184
       }
@@ -45528,7 +45528,7 @@ var levelData = {
       {
         "name": "",
         "properties": {
-
+          "kind": "baby"
         },
         "type": "villager",
         "x": 260,
@@ -45555,7 +45555,7 @@ var levelData = {
       {
         "name": "",
         "properties": {
-
+          "kind": "mofo"
         },
         "type": "villager",
         "x": 344,
@@ -45618,7 +45618,7 @@ var levelData = {
       {
         "name": "",
         "properties": {
-
+          "kind": "baby"
         },
         "type": "villager",
         "x": 52,
@@ -45627,7 +45627,7 @@ var levelData = {
       {
         "name": "",
         "properties": {
-
+          "kind": "mofo"
         },
         "type": "villager",
         "x": 140,
@@ -45699,6 +45699,7 @@ var levelData = {
       {
         "name": "",
         "properties": {
+          "kind": "mofo",
           "type": "potion"
         },
         "type": "pickup",
@@ -45739,7 +45740,7 @@ var levelData = {
       {
         "name": "",
         "properties": {
-
+          "kind": "baby"
         },
         "type": "villager",
         "x": 200,
@@ -45748,7 +45749,7 @@ var levelData = {
       {
         "name": "",
         "properties": {
-
+          "kind": "baby"
         },
         "type": "villager",
         "x": 212,
