@@ -182,6 +182,7 @@ Player.prototype.update = function(gamestate) {
         gamestate.level.entities.push(
           new Bullet({x: this.currPos.x + 8, y: this.currPos.y}, rockVel[this.direction], 'rock', 'evil')
         )
+        gamestate.res.playSound("throwrock");
     }
 
     if (gamestate.vpad.autofire('magic', 0, 12) && this.mana > 0 && this.hasMagic) {
@@ -304,6 +305,8 @@ Player.prototype.die = function() {
 // powerUP
 // -------------------------------------------------------
 Player.prototype.powerUp = function(powerup, entity, gamestate) {
+  var messageLong = 70;
+  var messageShort = 40;
   var makedead = true;
   switch(powerup) {
     case 'necklace':
@@ -313,6 +316,7 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
         'rage.  press x to use',
         'firey death magic',
       ];
+      gamestate.saypause = messageLong;
       this.hasMagic = true;
     break;
     case 'codpiece':
@@ -322,6 +326,7 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
         'shielding. press v to',
         'use magic shield',
       ];
+      gamestate.saypause = messageLong;
       this.hasShield = true;
     break;
     case 'garment':
@@ -331,6 +336,7 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
         'devilish quickness.',
         'hold c to sprint',
       ];
+      gamestate.saypause = messageLong;
       this.hasSprint = true;
     break;
     case 'cross':
@@ -339,18 +345,25 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
         'got useless artifact',
         'it has no real power',
       ]
+      gamestate.saypause = messageLong;
     break;
     case 'potion':
-      if (this.mana < this.maxMana)
+      if (this.mana < this.maxMana) {
         this.mana += tweak.manaRatio;
-      else
+        gamestate.res.playSound("restore");
+      }
+      else {
         makedead = false;
+      }
     break;
     case 'lilheart':
-      if (this.health < this.maxHealth)
+      if (this.health < this.maxHealth) {
         this.health++;
-      else
+        gamestate.res.playSound("restore");
+      }
+      else {
         makedead = false;
+      }
     break;
     case 'brain':
       gamestate.say = [
@@ -358,6 +371,8 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
         'max mana points increased',
         'by one bar'
       ];
+      gamestate.saypause = messageShort;
+      gamestate.res.playSound("powerup");
       this.maxMana += tweak.manaRatio;
       this.mana += tweak.manaRatio;
     break;
@@ -367,6 +382,8 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
         'max health increased',
         'by one bar'
       ];
+      gamestate.saypause = messageShort;
+      gamestate.res.playSound("powerup");
       this.maxHealth++;
       this.health++;
     break;
@@ -375,6 +392,8 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
          'ate baby. got full',
          'health and manas'
        ];
+      gamestate.saypause = messageShort;
+      gamestate.res.playSound("powerup");
       this.health = this.maxHealth;
       this.mana = this.maxMana;
     break;

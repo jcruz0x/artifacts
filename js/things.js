@@ -212,6 +212,7 @@ NPC.prototype.getHitbox = function() {
 // -------------------------------------------------------
 NPC.prototype.talkTo = function(gamestate) {
   gamestate.say = this.lines;
+  gamestate.res.playSound("talk");
 }
 
 // -------------------------------------------------------

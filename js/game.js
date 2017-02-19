@@ -38,9 +38,11 @@ function Game() {
     portalTick: 0,
     unPortalTick: 0,
     say: null,
+    saypause: 0,
     endTick: 0,
     winGame: false,
-    artifacts: 0
+    artifacts: 0,
+    res: this.res,
   }
 
   var self = this;
@@ -135,9 +137,11 @@ Game.prototype.runLogic = function() {
 
 
   if (this.gameStateRef.say != null) {
-    if (this.vpad.pressed('interact')) {
+    this.gameStateRef.saypause--;
+    if (this.vpad.pressed('interact') && this.gameStateRef.saypause < 0) {
       this.gameStateRef.say = null;
       this.keyHandler.incrementTicks();
+      this.res.playSound("talkdone");
     } else {
       this.player.setPrevPos();
       this.keyHandler.incrementTicks();

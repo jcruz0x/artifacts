@@ -188,45 +188,5 @@ Renderer.prototype.winGameCard = function() {
   this.context.font = "10px monospace"
   this.context.fillText("u won stupid game", 48, 64)
   this.context.fillText("now go away", 80, 80)
-
 }
 
-/*
-// -------------------------------------------------------
-// Renderer.mosaicEffect
-// -------------------------------------------------------
-Renderer.prototype.mosaicEffect = function(blocksize) {
-  for (var x = 0; x < RES_X; x += blocksize) {
-    for (var y = 0; y < RES_Y; y += blocksize) {
-      var colorstring = this.sampleBlock(x, y, blocksize)
-      this.context.fillStyle = colorstring;
-      this.context.fillRect(x, y, blocksize, blocksize);
-    }
-  }
-}
-
-// -------------------------------------------------------
-// Renderer.sampleBlock
-// -------------------------------------------------------
-Renderer.prototype.sampleBlock = function(x, y, blocksize) {
-  var red = 0;
-  var blue = 0;
-  var green = 0;
-  var gap = (blocksize / 2) | 0;
-  for (var i = 0; i < 3; i++) {
-    for (var j = 0; j < 3; j++) {
-      var xPlus = (gap * i) | 0;
-      var yPlus = (gap * j) | 0;
-      var sample = this.context.getImageData(x + xPlus, y + yPlus, 1, 1);
-      //console.log(data)
-      red   += sample.data[0];
-      green += sample.data[1];
-      blue  += sample.data[2];
-    }
-  }
-
-  var colorstring = "rgb(" + (red / 9) + "," + (blue / 9) + "," + (green / 9) + ")";
-  // console.log(colorstring);
-  return colorstring;
-}
-*/

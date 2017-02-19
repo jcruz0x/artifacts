@@ -11,8 +11,8 @@ def stripname(filename)
   short.split('.').first
 end
 
-def addImages(srchash, path)
-  find = path + "*.png"
+def addFiles(srchash, path)
+  find = path
   found = Dir.glob(find)
   found.each do |filename|
     shortname = stripname(filename)
@@ -20,14 +20,19 @@ def addImages(srchash, path)
   end
 end
 
-paths = ['gfx/']
-sourcehash = {}
+imgpath = 'gfx/*.png'
+imghash = {}
 
-paths.each do |path|
-  addImages(sourcehash, path)
-end
+sndpath = 'snd/*.wav'
+sndhash = {}
 
-jdoc  = JSON sourcehash
-jsdoc = "var imageSources = " + jdoc
+addFiles(imghash, imgpath)
+addFiles(sndhash, sndpath)
 
-File.open("jsdata/imagesources.js", 'w') { |f| f.write(jsdoc) }
+img_jdoc  = JSON imghash
+img_jsdoc = "var imageSources = " + img_jdoc
+File.open("jsdata/imagesources.js", 'w') { |f| f.write(img_jsdoc) }
+
+snd_jdoc = JSON sndhash
+snd_jsdoc = "var soundSources = " + snd_jdoc
+File.open("jsdata/soundsources.js", 'w') { |f| f.write(snd_jsdoc) }

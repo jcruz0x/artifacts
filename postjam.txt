@@ -41,8 +41,8 @@ Artifacts Post-Jam Features:
 	- swinging chain minibosses
 	- old men that shoot fire (at player)
 * better mechanics, bug fixes, ui improvements
-	- dont pick up health / mana when full
-	- delay on skipping powerup get messages
+	- dont pick up health / mana when full DONE
+	- delay on skipping powerup get messages DONE
 	- shield artifact now attacks
 * sound effects for everything
 	- make them all in bfxr
@@ -58,4 +58,4 @@ Artifacts Post-Jam Features:
 	- faster, and tends to navigate towards player
 	- shoots fire in all directions
 	- shoots energy ball right at player
-	- surrounded by minibosses 
+	- surrounded by minibosses
