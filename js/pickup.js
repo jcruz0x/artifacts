@@ -29,7 +29,6 @@ Pickup.prototype.getHitbox = function() {
 // Get Special
 // -------------------------------------------------------
 Pickup.prototype.getSpecial = function() {
-  this.dead = true;
   return {
     type: "pickup",
     pickup: this.type

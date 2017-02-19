@@ -211,7 +211,7 @@ Player.prototype.update = function(gamestate) {
             gamestate.portalPos = special.destpos;
           }
           if (special.type == 'pickup') {
-            this.powerUp(special.pickup, gamestate);
+            this.powerUp(special.pickup, entity, gamestate);
           }
         }
         if (((flags & eFlags.hazard) != 0) && this.hurtTick == 0 && this.deathTick == 0 && this.shieldTick == 0) {
@@ -303,7 +303,8 @@ Player.prototype.die = function() {
 // -------------------------------------------------------
 // powerUP
 // -------------------------------------------------------
-Player.prototype.powerUp = function(powerup, gamestate) {
+Player.prototype.powerUp = function(powerup, entity, gamestate) {
+  var makedead = true;
   switch(powerup) {
     case 'necklace':
       gamestate.artifacts++;
@@ -340,14 +341,16 @@ Player.prototype.powerUp = function(powerup, gamestate) {
       ]
     break;
     case 'potion':
-      if (this.mana < this.maxMana) {
+      if (this.mana < this.maxMana)
         this.mana += tweak.manaRatio;
-      }
+      else
+        makedead = false;
     break;
     case 'lilheart':
-      if (this.health < this.maxHealth) {
+      if (this.health < this.maxHealth)
         this.health++;
-      }
+      else
+        makedead = false;
     break;
     case 'brain':
       gamestate.say = [
@@ -378,7 +381,10 @@ Player.prototype.powerUp = function(powerup, gamestate) {
   }
 
   if (gamestate.artifacts >= 4) {
-    console.log("did it")
+    //console.log("did it")
     gamestate.levels.castle.replaceId(135, 0, 'upper');
   }
+
+  if (makedead)
+    entity.dead = true;
 }
