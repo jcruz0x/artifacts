@@ -215,7 +215,7 @@ Player.prototype.update = function(gamestate) {
             this.powerUp(special.pickup, entity, gamestate);
           }
         }
-        if (((flags & eFlags.hazard) != 0) && this.hurtTick == 0 && this.deathTick == 0 && this.shieldTick == 0) {
+        if (((flags & eFlags.hazard) != 0) && this.hurtTick == 0 && this.deathTick == 0 && this.shieldTick == 0 && gamestate.godmode != true) {
           // console.log("ow")
           this.health--;
           if (this.health == 0) {

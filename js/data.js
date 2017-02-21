@@ -35,6 +35,7 @@ var tweak = {
   portalTime: 16,
   shutterHold: 3,
   villagerSpeed: 1,
+  bossSpeed: 1.5,
   startHealth: 5,
   startMana: 2,
   manaRatio: 5,

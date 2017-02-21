@@ -2,6 +2,8 @@
 
 Artifacts Post-Jam Features:
 
+==== old stuff =====
+
 * Work on maps, add more dungeon layers
 * add a few extra areas
 * add a fifth artifact?
@@ -20,6 +22,8 @@ Artifacts Post-Jam Features:
 * Fix Bugs
 
 ==== thoughts 2/18/17 ====
+
+(probably wont do most of these)
 
 * add a few more small maps
 	- side areas
@@ -45,17 +49,21 @@ Artifacts Post-Jam Features:
 	- delay on skipping powerup get messages DONE
 	- shield artifact now attacks
 * sound effects for everything
-	- make them all in bfxr
+	- make them all in bfxr, or in pico-8
 * better pizazz:
 	- sparkles when dashing
-	- straight line when dashing = dash attack
+	- straight line when dashing = dash attack?
+	    (after going in straight line, speed up like mario)
 	- screen shake?
 * title screen, better ending screen
 * title screen includes loading information
 * improve some of the artwork, better tiling
 * better final boss:
 	- a lot more hp
-	- faster, and tends to navigate towards player
+	- faster, and tends to navigate towards player DONE
 	- shoots fire in all directions
 	- shoots energy ball right at player
-	- surrounded by minibosses
+	- surrounded by minibosses and villagers
+	- small chance of various screams and shouts
+	
+use pico-8 to do additional artwork?

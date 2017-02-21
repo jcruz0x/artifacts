@@ -43,6 +43,7 @@ function Game() {
     winGame: false,
     artifacts: 0,
     res: this.res,
+    godmode:false
   }
 
   var self = this;

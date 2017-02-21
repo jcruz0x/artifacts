@@ -21,7 +21,7 @@ function Boss(obj) {
 
   this.hurtTick = 0;
 
-  this.health = 10;
+  this.health = 50;
 
   this.sensors = [
     {x: 0, y: 4, dir: DIR_LEFT},
@@ -83,7 +83,18 @@ Boss.prototype.update = function(gamestate) {
   if (this.changeTick > 0) {
     this.changeTick--
   } else {
-    this.direction = (Math.random() * 4) | 0;
+    if (Math.random() > 0.2) {
+      var dirs = [];
+      if (gamestate.player.currPos.y <= this.currPos.y) dirs.push(DIR_UP);
+      if (gamestate.player.currPos.y > this.currPos.y) dirs.push(DIR_DOWN);
+      if (gamestate.player.currPos.x <= this.currPos.x) dirs.push(DIR_LEFT);
+      if (gamestate.player.currPos.x > this.currPos.x) dirs.push(DIR_RIGHT);
+      
+      var pick = (Math.random() * dirs.length) | 0;
+      this.direction = dirs[pick];
+    } else {
+      this.direction = (Math.random() * 4) | 0;
+    }
     this.changeTick = ((Math.random() * 60) + 20) | 0;
     this.stepsTick = (Math.random() * this.changeTick) | 0;
   }
@@ -92,16 +103,16 @@ Boss.prototype.update = function(gamestate) {
     this.stepsTick--;
     switch(this.direction) {
     case DIR_UP:
-      this.currPos.y -= tweak.villagerSpeed;
+      this.currPos.y -= tweak.bossSpeed;
       break;
     case DIR_DOWN:
-      this.currPos.y += tweak.villagerSpeed;
+      this.currPos.y += tweak.bossSpeed;
       break;
     case DIR_LEFT:
-      this.currPos.x -= tweak.villagerSpeed;
+      this.currPos.x -= tweak.bossSpeed;
       break;
     case DIR_RIGHT:
-      this.currPos.x += tweak.villagerSpeed;
+      this.currPos.x += tweak.bossSpeed;
       break;
     }
   }
