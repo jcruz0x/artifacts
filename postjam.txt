@@ -25,41 +25,41 @@ Artifacts Post-Jam Features:
 
 (probably wont do most of these)
 
+-- cut these improvements (not worth it):
 * add a few more small maps
 	- side areas
 	- extra dungeon layers? (3 in each?)
 	- go inside buildings?
-* upgrade existing maps
-	- add new tiles here and there
+* refactor code:
+	- redesign a lot of stuff to make more sense
+	- base enemy class that otheres inherit from?	
+* better pizazz:
+	- sparkles when dashing
+	- straight line when dashing = dash attack?
+	    (after going in straight line, speed up like mario)
+	- screen shake?
+	- shield artifact now attacks
+
+	
+* fix existing maps
 	- make sure everything talks, can be read
 	- add new enemy types into there
 * add music (compress those songs down, alot)
 	- music always changes on map switch
 	- many areas are silent
 	- looping surf/wind sound on some areas
-* refactor code:
-	- redesign a lot of stuff to make more sense
-	- base enemy class that otheres inherit from?
-* new features:
-	- tnt barrels
-	- swinging chain minibosses
-	- old men that shoot fire (at player)
 * better mechanics, bug fixes, ui improvements
 	- dont pick up health / mana when full DONE
 	- delay on skipping powerup get messages DONE
-	- shield artifact now attacks
+* new features:
+	- swinging chain minibosses
+	- old men that shoot fire (at player)
 * sound effects for everything
 	- make them all in bfxr, or in pico-8
-* better pizazz:
-	- sparkles when dashing
-	- straight line when dashing = dash attack?
-	    (after going in straight line, speed up like mario)
-	- screen shake?
 * title screen, better ending screen
 * title screen includes loading information
-* improve some of the artwork, better tiling
 * better final boss:
-	- a lot more hp
+	- a lot more hp DONE
 	- faster, and tends to navigate towards player DONE
 	- shoots fire in all directions
 	- shoots energy ball right at player
@@ -67,3 +67,31 @@ Artifacts Post-Jam Features:
 	- small chance of various screams and shouts
 	
 use pico-8 to do additional artwork?
+need to catalouge artwork and sfx needed,
+then create it all at once
+separate sfx and sfxr folders? sfxr = repeatable, load 3x
+
+artwork:
+    - title screen / ending screen
+    - spiky ball / chain circle
+    - A few varieties of fireball (size, colors)
+    - old men (same body, 2x new heads with wizard hat & beard)
+    - chain knights are (recolored?) toughies
+    - add white line around artifacts
+    
+sounds:
+    - throwing stones
+    - throwing fireballs
+    - picking up potions
+    - picking up hearts
+    - victory music on artifact get
+    - super sound of upgrade get
+    - map transition
+    - take damage
+    - enemy take damage
+    - enemy splat
+    - shield use loop
+    - surf loop
+    - wind loop
+    - boss groan and moan
+    - boss die 

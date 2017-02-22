@@ -190,3 +190,17 @@ Renderer.prototype.winGameCard = function() {
   this.context.fillText("now go away", 80, 80)
 }
 
+
+// -------------------------------------------------------
+// titleCard
+// -------------------------------------------------------
+Renderer.prototype.titleCard = function(percentLoaded) {
+  // this.context.fillStyle = 'black';
+  // this.context.fillRect(16,8,208,100)
+  
+  this.context.fillStyle = 'white';
+  
+  this.context.font = "16px monospace"
+  this.context.fillText("Artifacts of Monstrosity", 16, 32);
+}
+
