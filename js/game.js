@@ -43,8 +43,10 @@ function Game() {
     winGame: false,
     artifacts: 0,
     res: this.res,
-    godmode:false
+    godmode:false,
   }
+
+  this.gameStarted = false;
 
   var self = this;
   this.intervalId = window.setInterval(function() { self.logicTick(); }, FRAME_MS);
@@ -55,7 +57,7 @@ function Game() {
 // Game.logicTick (main game loop)
 // -------------------------------------------------------
 Game.prototype.logicTick = function() {
-  if (this.res.everythingReady() == true) {
+  if (this.res.everythingReady() == true && this.gameStarted) {
     this.updateDelta();
 
     while (this.deltaRemaining >= FRAME_MS) {
@@ -65,6 +67,9 @@ Game.prototype.logicTick = function() {
   }
   else {
     this.oldTime = new Date();
+    if (this.vpad.pressed('interact'))
+      this.gameStarted = true;
+    this.keyHandler.incrementTicks();
   }
 }
 
@@ -72,53 +77,67 @@ Game.prototype.logicTick = function() {
 // Game.renderTick (renderingupdate)
 // -------------------------------------------------------
 Game.prototype.renderTick = function() {
-  if (this.res.everythingReady() == true) {
-
-
-    this.updateDelta();
-    this.deltaFraction = this.deltaRemaining / FRAME_MS;
-
-    this.renderer.cls();
-
-
-
-    if (this.gameStateRef.winGame == true) {
-      this.renderer.winGameCard();
-      this.renderer.flip();
-      return;
-    }
-
-    this.renderer.setCameraPos(this.gameStateRef, this.deltaFraction);
-
-
-     drawMap(this.renderer, this.level, "tilesheet");
-
-    for (var entity of this.level.entities) {
-      entity.draw(this.renderer, this.deltaFraction);
-    }
-
-    this.player.draw(this.renderer, this.deltaFraction);
-
-    DrawUI(this.gameStateRef, this.renderer);
-
-    if (this.gameStateRef.say != null) {
-      this.renderer.drawTextBox(this.gameStateRef.say)
-    }
-
-    var pTick = this.gameStateRef.portalTick;
-    var unpTick = this.gameStateRef.unPortalTick;
-    if (pTick > 0) {
-      this.renderer.drawShutterPortalTick(pTick);
-    } else if (unpTick > 0) {
-      this.renderer.drawShutterPortalTick(tweak.portalTime - unpTick);
-    }
-
-    this.renderer.flip();
+  if (this.res.everythingReady() == true && this.gameStarted) {
+    this.handleRendering();
+  } else {
+    this.handleTitle();
   }
 
   var self = this;
   window.requestAnimationFrame(function() { self.renderTick(); });
 }
+
+// -------------------------------------------------------
+// Game.handleTitle (rendering update in play)
+// -------------------------------------------------------
+Game.prototype.handleTitle = function() {
+  this.renderer.cls();
+  this.renderer.titleCard(this.res.everythingReady());
+  this.renderer.flip();
+}
+
+// -------------------------------------------------------
+// Game.handleRendering (rendering update in play)
+// -------------------------------------------------------
+Game.prototype.handleRendering = function() {
+  this.updateDelta();
+  this.deltaFraction = this.deltaRemaining / FRAME_MS;
+
+  this.renderer.cls();
+
+  if (this.gameStateRef.winGame == true) {
+    this.renderer.winGameCard();
+    this.renderer.flip();
+    return;
+  }
+
+  this.renderer.setCameraPos(this.gameStateRef, this.deltaFraction);
+
+  drawMap(this.renderer, this.level, "tilesheet");
+
+  for (var entity of this.level.entities) {
+    entity.draw(this.renderer, this.deltaFraction);
+  }
+
+  this.player.draw(this.renderer, this.deltaFraction);
+
+  DrawUI(this.gameStateRef, this.renderer);
+
+  if (this.gameStateRef.say != null) {
+    this.renderer.drawTextBox(this.gameStateRef.say)
+  }
+
+  var pTick = this.gameStateRef.portalTick;
+  var unpTick = this.gameStateRef.unPortalTick;
+  if (pTick > 0) {
+    this.renderer.drawShutterPortalTick(pTick);
+  } else if (unpTick > 0) {
+    this.renderer.drawShutterPortalTick(tweak.portalTime - unpTick);
+  }
+
+  this.renderer.flip();
+}
+
 
 // -------------------------------------------------------
 // Game.runLogic (main logic update)
@@ -136,7 +155,6 @@ Game.prototype.runLogic = function() {
     }
   }
 
-
   if (this.gameStateRef.say != null) {
     this.gameStateRef.saypause--;
     if (this.vpad.pressed('interact') && this.gameStateRef.saypause < 0) {
@@ -149,7 +167,6 @@ Game.prototype.runLogic = function() {
       return;
     }
   }
-
 
   this.renderer.animTick++;
 
@@ -185,10 +202,8 @@ Game.prototype.runLogic = function() {
 
    this.player.setPrevPos();
    this.player.update(this.gameStateRef);
-  //
-  // this.level.animateTiles(this.renderer.animTick);
-   this.keyHandler.incrementTicks();
 
+   this.keyHandler.incrementTicks();
 
    if (this.gameStateRef.portalTick > 0 && this.gameStateRef.unPortalTick == 0) {
      this.gameStateRef.portalTick--;
@@ -199,7 +214,6 @@ Game.prototype.runLogic = function() {
    }
 
    if (this.gameStateRef.portalTick == 1) {
-     //  console.log("booyah")
      this.level = this.levels[this.gameStateRef.portalDest];
      this.gameStateRef.level = this.level;
      this.player.moveToMapPos(this.gameStateRef.portalPos);
@@ -232,11 +246,15 @@ Game.prototype.loadLevels = function() {
   }
 }
 
+
 // =======================================================
 // Initialization (on window load)
 // =======================================================
 
-var game // make game global for access while debugging
+// make game (essentially root object) global 
+// for access while debugging
+var game;
+
 window.onload = function() {
   game = new Game();
 }

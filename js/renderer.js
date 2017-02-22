@@ -46,6 +46,8 @@ Renderer.prototype.flip = function() {
 // Renderer.cls - clears the screen with given color
 // -------------------------------------------------------
 Renderer.prototype.cls = function(color) {
+  if (color == undefined)
+    color = "black";
   this.context.fillstyle = color;
   this.context.fillRect(0, 0, RES_X, RES_Y);
   this.flip();
@@ -180,27 +182,34 @@ Renderer.prototype.winGameCard = function() {
   this.context.fillStyle = "rgba(10, 10, 20, 0.95)";
   this.context.fillRect(16, 8, 208, 100);
 
-  this.context.fillStyle = "white"
+  this.context.fillStyle = "white";
 
-  this.context.font = "16px monospace"
-  this.context.fillText("congratzulashuns", 32, 32)
+  this.context.font = "16px monospace";
+  this.context.fillText("congratzulashuns", 32, 32);
 
-  this.context.font = "10px monospace"
-  this.context.fillText("u won stupid game", 48, 64)
-  this.context.fillText("now go away", 80, 80)
+  this.context.font = "10px monospace";
+  this.context.fillText("u won stupid game", 48, 64);
+  this.context.fillText("now go away", 80, 80);
 }
 
 
 // -------------------------------------------------------
 // titleCard
 // -------------------------------------------------------
-Renderer.prototype.titleCard = function(percentLoaded) {
-  // this.context.fillStyle = 'black';
-  // this.context.fillRect(16,8,208,100)
-  
+Renderer.prototype.titleCard = function(loaded) {
   this.context.fillStyle = 'white';
+  this.context.textAlign = "center";
   
   this.context.font = "16px monospace"
-  this.context.fillText("Artifacts of Monstrosity", 16, 32);
+  this.context.fillText("Artifacts of Monstrosity", 120, 24);
+
+  this.context.font = "10x monospace";
+  if (loaded)
+    this.context.fillText("press space to begin", 120, 100);
+  else
+    this.context.fillText("loading...", 120, 100);
+
+  this.context.textAlign = "start";
+  this.context.fillStyle = 'black';
 }
 
