@@ -21,7 +21,7 @@ function Boss(obj) {
 
   this.hurtTick = 0;
 
-  this.health = 50;
+  this.health = 35;
 
   this.sensors = [
     {x: 0, y: 4, dir: DIR_LEFT},

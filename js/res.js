@@ -10,14 +10,6 @@
 function Res() {
     this.loadImages();
     this.loadSounds();
-
-    this.soundmapping = {
-      "throwrock": "zoot",
-      "talk": "babop",
-      "talkdone": "wom",
-      "powerup": "womble",
-      "restore": "dalup"
-    }
 }
 
 // -------------------------------------------------------
@@ -54,15 +46,19 @@ Res.prototype.loadImages = function() {
 Res.prototype.loadSounds = function() {
   var sources = soundSources;
 
-  this.soundCount = Object.keys(sources).length * 3;
+  this.soundCount = 0;
+  for (var key in sources) {
+    this.soundCount += sources[key].duplicates;
+  }
   this.soundsLoaded = 0;
   this.soundLoadDone = false;
 
   this.sounds = {};
 
   for (var key in sources) {
+    var duplicates = sources[key].duplicates;
     var soundlist = []
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < duplicates; i++) {
       var snd = new Audio();
       soundlist[i] = snd;
 
@@ -74,7 +70,7 @@ Res.prototype.loadSounds = function() {
         }
       });
 
-      snd.src = sources[key];
+      snd.src = sources[key].file;
     }
 
     this.sounds[key] = soundlist;
@@ -99,15 +95,11 @@ Res.prototype.getImage = function(name) {
 // playSound
 // -------------------------------------------------------
 Res.prototype.playSound = function(sound) {
-  var mapping = this.soundmapping[sound];
-  if (mapping == undefined)
-    return;
-
-  var soundlist = this.sounds[mapping];
+  var soundlist = this.sounds[sound];
   if (soundlist == undefined)
     return;
 
-  for(var i = 0; i < 3; i++) {
+  for(var i = 0; i < soundlist.length; i++) {
     var snd = soundlist[i];
     if (snd.duration == 0 || snd.paused == true) {
       snd.play();
