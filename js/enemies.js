@@ -118,7 +118,13 @@ Villager.prototype.message = function(flags) {
 // Villager.update
 // -------------------------------------------------------
 Villager.prototype.update = function(gamestate) {
-  // == death tick
+  if (this.deathTick == 20)
+    gamestate.res.playSound("enemysplat");
+
+  if (this.deathTick == 0 && this.flashTick == 20)
+    gamestate.res.playSound("enemydamage");
+
+
   if (this.deathTick > 0) {
     this.deathTick--
     if (this.deathTick == 1) {

@@ -107,3 +107,26 @@ Res.prototype.playSound = function(sound) {
     }
   }
 }
+
+// -------------------------------------------------------
+// LoopSound
+// -------------------------------------------------------
+Res.prototype.loopSound = function(sound) {
+  var soundlist = this.sounds[sound];
+  if (soundlist == undefined)
+    return;
+
+  soundlist[0].loop = true;
+  soundlist[0].play();
+}
+
+// -------------------------------------------------------
+// StopSound
+// -------------------------------------------------------
+Res.prototype.stopSound = function(sound) {
+  var soundlist = this.sounds[sound];
+  if (soundlist == undefined)
+    return;
+
+  soundlist[0].pause();
+}

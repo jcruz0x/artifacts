@@ -65,7 +65,19 @@ Boss.prototype.message = function(flags) {
 // Boss.update
 // -------------------------------------------------------
 Boss.prototype.update = function(gamestate) {
-  // == death tick
+  if (this.deathTick == 20)
+    gamestate.res.playSound("enemysplat");
+
+  if (this.deathTick == 0 && this.hurtTick == 25) {
+    var roll = Math.random();
+    if (roll < 0.8)
+      gamestate.res.playSound("enemydamage");
+    else if (roll < 0.9)
+      gamestate.res.playSound("bossmoan1");
+    else
+      gamestate.res.playSound("bossmoan2");
+  }
+
   if (this.deathTick > 0) {
     this.deathTick--
     if (this.deathTick == 1) {

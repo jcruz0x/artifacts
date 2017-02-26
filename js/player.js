@@ -93,7 +93,11 @@ Player.prototype.update = function(gamestate) {
       this.mana -= tweak.manaRatio;
       this.shieldTick = tweak.shieldTime;
       this.shieldCoolTick = tweak.shieldCool;
+      gamestate.res.loopSound("shieldloop");
     }
+
+    if (this.shieldTick <= 0)
+      gamestate.res.stopSound("shieldloop");
 
     var vSpeed = (gamestate.vpad.down('sprint') && this.hasSprint) ? tweak.playerSprint : tweak.playerSpeed;
 
@@ -194,6 +198,7 @@ Player.prototype.update = function(gamestate) {
             new Bullet({x: this.currPos.x + 8, y: this.currPos.y}, fireballvec, 'fireball', 'evil')
           )
         }
+        gamestate.res.playSound("throwfire");
     }
 
 
@@ -206,21 +211,22 @@ Player.prototype.update = function(gamestate) {
           // console.log("special")
           var special = entity.getSpecial();
           if (special.type == 'portal' && gamestate.portalTick == 0) {
-            // console.log("its happening");
             gamestate.portalTick = tweak.portalTime;
             gamestate.portalDest = special.dest;
             gamestate.portalPos = special.destpos;
+            gamestate.res.playSound("transition");
           }
           if (special.type == 'pickup') {
             this.powerUp(special.pickup, entity, gamestate);
           }
         }
         if (((flags & eFlags.hazard) != 0) && this.hurtTick == 0 && this.deathTick == 0 && this.shieldTick == 0 && gamestate.godmode != true) {
-          // console.log("ow")
           this.health--;
           if (this.health == 0) {
             this.deathTick = tweak.playerDeathTick;
+            gamestate.res.playSound("playerdie");
           } else {
+            gamestate.res.playSound("takedamage");
             this.hurtTick = tweak.hurtTickTime;
           }
         }
@@ -318,6 +324,7 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
       ];
       gamestate.saypause = messageLong;
       this.hasMagic = true;
+      gamestate.res.playSound("artifactget");
     break;
     case 'codpiece':
       gamestate.artifacts++;
@@ -328,6 +335,7 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
       ];
       gamestate.saypause = messageLong;
       this.hasShield = true;
+      gamestate.res.playSound("artifactget");
     break;
     case 'garment':
       gamestate.artifacts++;
@@ -338,6 +346,7 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
       ];
       gamestate.saypause = messageLong;
       this.hasSprint = true;
+      gamestate.res.playSound("artifactget");
     break;
     case 'cross':
       gamestate.artifacts++;
@@ -346,11 +355,12 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
         'it has no real power',
       ]
       gamestate.saypause = messageLong;
+      gamestate.res.playSound("artifactget");
     break;
     case 'potion':
       if (this.mana < this.maxMana) {
         this.mana += tweak.manaRatio;
-        gamestate.res.playSound("restore");
+        gamestate.res.playSound("potion");
       }
       else {
         makedead = false;
@@ -359,7 +369,7 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
     case 'lilheart':
       if (this.health < this.maxHealth) {
         this.health++;
-        gamestate.res.playSound("restore");
+        gamestate.res.playSound("heart");
       }
       else {
         makedead = false;
@@ -372,7 +382,7 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
         'by one bar'
       ];
       gamestate.saypause = messageShort;
-      gamestate.res.playSound("powerup");
+      gamestate.res.playSound("upgrade");
       this.maxMana += tweak.manaRatio;
       this.mana += tweak.manaRatio;
     break;
@@ -383,7 +393,7 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
         'by one bar'
       ];
       gamestate.saypause = messageShort;
-      gamestate.res.playSound("powerup");
+      gamestate.res.playSound("upgrade");
       this.maxHealth++;
       this.health++;
     break;
@@ -393,7 +403,7 @@ Player.prototype.powerUp = function(powerup, entity, gamestate) {
          'health and manas'
        ];
       gamestate.saypause = messageShort;
-      gamestate.res.playSound("powerup");
+      gamestate.res.playSound("upgrade");
       this.health = this.maxHealth;
       this.mana = this.maxMana;
     break;
