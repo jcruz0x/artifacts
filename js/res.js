@@ -10,6 +10,8 @@
 function Res() {
     this.loadImages();
     this.loadSounds();
+
+    this.current_song = null;
 }
 
 // -------------------------------------------------------
@@ -56,7 +58,9 @@ Res.prototype.loadSounds = function() {
   this.sounds = {};
 
   for (var key in sources) {
-    var duplicates = sources[key].duplicates;
+    var duplicates = sources[key].duplicates || 1;
+    var looping = sources[key].looping || false;
+    //var volume = sources[key].
     var soundlist = []
     for (var i = 0; i < duplicates; i++) {
       var snd = new Audio();
@@ -129,4 +133,35 @@ Res.prototype.stopSound = function(sound) {
     return;
 
   soundlist[0].pause();
+}
+
+// -------------------------------------------------------
+// PlayMusic
+// -------------------------------------------------------
+Res.prototype.playMusic = function(song) {
+
+  var soundlist = this.sounds[song];
+  if (soundlist == undefined)
+    return;
+
+  var new_song = soundlist[0];
+
+  if (this.current_song == new_song)
+    return;
+
+  if (this.current_song != null)
+    this.current_song.pause();
+
+  new_song.currentTime = 0;
+  new_song.play();
+
+  this.current_song = new_song;
+}
+
+// -------------------------------------------------------
+// PauseMusic
+// -------------------------------------------------------
+Res.prototype.pauseMusic = function() {
+  if (this.current_song != null)
+    this.current_song.pause();
 }

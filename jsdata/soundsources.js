@@ -62,5 +62,13 @@ var soundSources = {
 	playerdie: {
 		file: "snd/badoom.wav",
 		duplicates: 1
-	}
+	},
+	// fancycakes: {
+	// 	file: "mus/fancycakes.aac",
+	// 	duplicates: 1
+	// },
+	// catchthemystery: {
+	// 	file: "mus/catchthemystery.aac",
+	// 	duplicates: 1
+	// }
 }

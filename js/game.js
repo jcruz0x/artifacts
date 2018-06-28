@@ -67,8 +67,10 @@ Game.prototype.logicTick = function() {
   }
   else {
     this.oldTime = new Date();
-    if (this.vpad.pressed('interact'))
-      this.gameStarted = true;
+    if (this.res.everythingReady() && this.vpad.pressed('interact')) {
+      this.gameStarted = true; 
+      this.res.playMusic('fancycakes');
+    }
     this.keyHandler.incrementTicks();
   }
 }

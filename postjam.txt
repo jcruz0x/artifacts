@@ -8,7 +8,7 @@ Artifacts Post-Jam Features:
 * add a few extra areas
 * add a fifth artifact?
 * up north, adds a super attack
-* make the shield better
+* make the shield better (kills monsters)
 * Fix Broken Signs / Monsters etc.
 * More Monster types to talk to
 * SFX, Music
@@ -18,6 +18,7 @@ Artifacts Post-Jam Features:
     - Old Men That Shoot Fire
     - Mini Boss Guys With Swinging Chain
 * Final Boss Has multiple stages, multiple sizes
+    - shoots fire, has dash attack
 * Title Screen, Menus?, Better Ending
 * Fix Bugs
 
@@ -38,6 +39,7 @@ Artifacts Post-Jam Features:
 	- straight line when dashing = dash attack?
 	    (after going in straight line, speed up like mario)
 	- screen shake?
+	- do dash like zelda? (with invincibility)
 	- shield artifact now attacks
 
 	
@@ -59,7 +61,7 @@ Artifacts Post-Jam Features:
 * title screen, better ending screen
 * title screen includes loading information
 * better final boss:
-	- a lot more hp DONE
+	- a lot more hp DONE (maybe scale back)
 	- faster, and tends to navigate towards player DONE
 	- shoots fire in all directions
 	- shoots energy ball right at player
@@ -94,4 +96,4 @@ sounds:
     - surf loop
     - wind loop
     - boss groan and moan
-    - boss die 
+    - boss die
